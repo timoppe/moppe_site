@@ -5,7 +5,9 @@
 Este projeto foi criado com o [Vite](https://vitejs.dev/) \
 O Vite é um ambiente de desenvolvimento para aplicações web modernas, projetado para ser extremamente rápido e eficiente.
 
-## Requeriments
+## 💻 Pré-requisitos
+
+Antes de começar, verifique se você possui as seguintes ferramentas instaladas:
 
 - [Node.js](https://nodejs.org/en) \
 Digite os comandos: `node -v` e `npm -v` no terminal e verifique se há o retorno da versão de ambos
@@ -15,7 +17,7 @@ Digite o comando: `git -v` no terminal e verifique se há retorno da versão do 
 
 Em ambas as instalações, caso haja algum erro com o comando, será preciso adicionar a pasta de instalação nas variáveis de ambiente do sistema operacional.
 
-## Commands
+## 🚀 Instalação e comandos
 
 Caso não tenha o projeto baixado na máquina: \
 Abra o prompt na pasta que deseja baixar o projeto e digite:\
@@ -23,13 +25,13 @@ Abra o prompt na pasta que deseja baixar o projeto e digite:\
 O git irá clonar o projeto de desenvolvimento na pasta selecionada\
 Acesse a pasta criada pelo git `cd <nome da pasta>` (raiz do projeto).
 
-## `npm install`
+## <npm install>
 
 Após realizar o clone do projeto, faça a instalação dos pacotes do Node.js\
 O Node irá baixar as dependências necessárias que foram utilizadas no desenvolvimento do projeto.
 Após finalizar, verifique se a pasta `node_modules` foi criada.
 
-## `npm run dev`
+## <npm run dev>
 
 Após realizar a instalação das dependências, inicie a aplicação\
 O comando abre a aplicação React JS em modo de desenvolvedor\
