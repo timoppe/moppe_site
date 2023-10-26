@@ -2,21 +2,21 @@
 import styles from './Navbar.module.css';
 
 // Hooks
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // NavLink
 import { NavLink } from 'react-router-dom';
 
-import { useAuthentication } from '../hooks/useAuthentication';
-import { useAuthValue } from '../context/AuthContext';
+// import { useAuthentication } from '../hooks/useAuthentication';
+// import { useAuthValue } from '../context/AuthContext';
 
 // Images
 import Logo from '../assets/images/icones/logo_moppe.png';
 
 const Navbar = () => {
 
-    const {user} = useAuthValue();
-    const {logout} = useAuthentication();
+    // const {user} = useAuthValue();
+    // const {logout} = useAuthentication();
 
     // Controla os estados dos submenus
     const [isDropdownOpen, setIsDropdownOpen] = useState({
@@ -99,6 +99,7 @@ const Navbar = () => {
                                     <li><NavLink to="https://escolamoppe.gupy.io/" target="_blank">Trabalhe Conosco</NavLink></li>
                                 </ul>
                             </li>
+                            {/*
                             {user && (
                             <li onMouseEnter={() => handleMouseEnter('blog')} onMouseLeave={() => handleMouseLeave('blog')}>
                                 <p>Blog</p>
@@ -113,6 +114,7 @@ const Navbar = () => {
                             {!user && (
                             <li><NavLink to="/blog"><p>Blog</p></NavLink></li>
                             )}
+                            */}
                         </ul>
                     </nav>
 

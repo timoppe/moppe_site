@@ -7,7 +7,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 //context
 import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
-import NavbarMobile from './components/NavbarMobile';
+// import NavbarMobile from './components/NavbarMobile';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import RDStation from './components/RDStation';
@@ -34,6 +34,7 @@ import Search from './pages/blog/Search/Search';
 import Dashboard from './pages/blog/Dashboard/Dashboard';
 import Post from './pages/blog/Post/Post';
 import EditPost from './pages/blog/EditPost/EditPost';
+import Manutencao from './pages/manutencao/Manutencao';
 
 Modal.setAppElement('#root');
 
@@ -94,7 +95,7 @@ function App() {
     <div className="App">
       <AuthProvider value={{user}}>
       <ScrollToTop />
-      {!isAccessMobile ? <Navbar /> : <NavbarMobile/>} 
+      {/* {!isAccessMobile ? <Navbar /> : <NavbarMobile/>} 
         <div className="container">
           <Routes>
             <Route path='/' element={<Home />}/>
@@ -119,7 +120,35 @@ function App() {
             <Route path='/blog/createpost' element={user ? <CreatePost/> : <Navigate to="/login"/>} />
             <Route path='/blog/dashboard' element={user ? <Dashboard/> : <Navigate to="/login"/>} />
           </Routes>
-        </div>
+        </div> */}
+        {!isAccessMobile && <Navbar/>}
+        {!isAccessMobile ? (
+                  <div className="container">
+                  <Routes>
+                    <Route path='/' element={<Home />}/>
+                    <Route path='/blog/search' element={<Search />}/>
+                    <Route path='/blog/posts/:id' element={<Post/>}/>
+                    <Route path='/sobre' element={<AMoppe />}/>
+                    <Route path='/propostapedagogica' element={<PropostaPedagogica />}/>
+                    <Route path='/estruturaescolar' element={<EstruturaEscolar />}/>
+                    <Route path='/bercario' element={<Bercario />}/>
+                    <Route path='/infantil' element={<Infantil />}/>
+                    <Route path='/anosiniciais' element={<AnosIniciais />}/>
+                    <Route path='/anosfinais' element={<AnosFinais />}/>
+                    <Route path='/smart' element={<Smart />}/>
+                    <Route path='/atividadesextra' element={<Atividades />}/>
+                    <Route path='/politica-de-privacidade' element={<PoliticaDePrivacidade/>}/>
+                    <Route path="*" element={<NotFound />}/>
+                    <Route path='/contato' element={<Contato />}/>
+                    <Route path='/blog' element={<HomeBlog/>} />
+                    <Route path='/login' element={!user ? <LoginBlog /> : <Navigate to="/blog"/>} />
+                    <Route path='/blog/posts/edit/:id' element={user ? <EditPost /> : <Navigate to="/login"/>} />
+                    <Route path='/register' element={!user ? <RegisterBlog /> : <Navigate to="/blog"/>} />
+                    <Route path='/blog/createpost' element={user ? <CreatePost/> : <Navigate to="/login"/>} />
+                    <Route path='/blog/dashboard' element={user ? <Dashboard/> : <Navigate to="/login"/>} />
+                  </Routes>
+                </div> 
+        ) : (<Manutencao/>)} 
        <Footer />
        <RDStation />
        <BlipChat />
