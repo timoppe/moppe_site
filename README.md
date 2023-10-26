@@ -30,8 +30,9 @@ Acesse a pasta criada pelo git `cd <nome da pasta>` (raiz do projeto).
 Após realizar o clone do projeto, faça a instalação dos pacotes do Node.js\
 O Node irá baixar as dependências necessárias que foram utilizadas no desenvolvimento do projeto.
 Após finalizar, verifique se a pasta `node_modules` foi criada.
-
+...
 <npm run dev>
+...
 
 Após realizar a instalação das dependências, inicie a aplicação\
 O comando abre a aplicação React JS em modo de desenvolvedor\
