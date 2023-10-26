@@ -52,14 +52,24 @@ A aplicação esta hospedada na plataforma [Vercel](https://vercel.com/)\
 
 Para implantar as alterações, siga os passos: \
 1 - Verifique no console se não há erros de compilação, o VSCode também mostra em vermelho os erros nos arquivos.\
-2 - Suba as alterações para a branch development com os comandos:
-```git add . ```
-```git commit -m "Descrição do commit"```
-```git push origin development```
+2 - Suba as alterações para a branch development com os comandos\
+```
+git add . 
+```
+```
+git commit -m "Descrição do commit"
+```
+```
+git push origin development
+```
 3 - Após seguir esses comandos, verifique se as atualizações foram feitas no GitHub.\
 4 - Realize o merge para a branch master\
-```git checkout master```
-```git merge development```\
+```
+git checkout master
+```
+```
+git merge development
+```\
 5 - Volte ao GitHub e verifique se a opção de pull request apareceu e aprove o pull request.\
 6 - Aguarde alguns minutos para a aplicação ser atualizada.
 
