@@ -75,13 +75,13 @@ git merge development
 
 ## Recomendações
 
-- Nunca alterar diretamente a branch master sem conhecimento, nela se encontra a aplicação em produção\
-- Sempre suba as alterações realizadas na branch de desenvolvimento `development`\
-- Se desejar criar outra branch para testes, digite o comando indicando o nome da branch `git checkout -b <nome da branch>`\
-- Realize a adição das alterações na stage `git add .`\
-- Faça o commit das alterações `git commit -m "Mensagem no commit"`\
-- Suba as alterações para a branch de testes `git push origin <nome da branch>`\
-- Descrever nos commmits as alterações feitas para documentar o que foi feito\
+- Nunca alterar diretamente a branch master sem conhecimento, nela se encontra a aplicação em produção
+- Sempre suba as alterações realizadas na branch de desenvolvimento `development`
+- Se desejar criar outra branch para testes, digite o comando indicando o nome da branch `git checkout -b <nome da branch>`
+- Realize a adição das alterações na stage `git add .`
+- Faça o commit das alterações `git commit -m "Mensagem no commit"`
+- Suba as alterações para a branch de testes `git push origin <nome da branch>`
+- Descrever nos commmits as alterações feitas para documentar o que foi feito
 - Para correção de bugs ou erros, criar uma nova issue, caso hajam problemas ou bugs relacionados, criar um milestone.
 
 ## Leia mais
