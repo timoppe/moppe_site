@@ -53,17 +53,17 @@ A aplicação esta hospedada na plataforma [Vercel](https://vercel.com/)\
 Para implantar as alterações, siga os passos: \
 1 - Verifique no console se não há erros de compilação, o VSCode também mostra em vermelho os erros nos arquivos.\
 2 - Suba as alterações para a branch development com os comandos:
-- ```git add . ```
-- `git commit -m "Descrição do commit"`
-- `git push origin development`
+```git add . ```
+```git commit -m "Descrição do commit"```
+```git push origin development```
 3 - Após seguir esses comandos, verifique se as atualizações foram feitas no GitHub.\
 4 - Realize o merge para a branch master\
-- `git checkout master`
-- `git merge development`\
+```git checkout master```
+```git merge development```\
 5 - Volte ao GitHub e verifique se a opção de pull request apareceu e aprove o pull request.\
 6 - Aguarde alguns minutos para a aplicação ser atualizada.
 
-## Recommendations
+## Recomendações
 
 - Nunca alterar diretamente a branch master sem conhecimento, nela se encontra a aplicação em produção\
 - Sempre suba as alterações realizadas na branch de desenvolvimento `development`\
@@ -74,7 +74,7 @@ Para implantar as alterações, siga os passos: \
 - Descrever nos commmits as alterações feitas para documentar o que foi feito\
 - Para correção de bugs ou erros, criar uma nova issue, caso hajam problemas ou bugs relacionados, criar um milestone.
 
-## Learn more
+## Leia mais
 
 Para saber mais sobre o React JS acesse a [documentação sobre criação do aplicativo React](https://facebook.github.io/create-react-app/docs/getting-started)
 
