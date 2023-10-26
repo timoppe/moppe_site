@@ -53,7 +53,7 @@ Para implantar as alterações, siga os passos: \
 3 - Após seguir esses comandos, verifique se as atualizações foram feitas no GitHub.\
 4 - Realize o merge para a branch master\
 - `git checkout master`
-- `git merge development`
+- `git merge development`\
 5 - Volte ao GitHub e verifique se a opção de pull request apareceu e aprove o pull request.\
 6 - Aguarde alguns minutos para a aplicação ser atualizada.
 
