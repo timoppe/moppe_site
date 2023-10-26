@@ -25,15 +25,16 @@ Abra o prompt na pasta que deseja baixar o projeto e digite:\
 O git irá clonar o projeto de desenvolvimento na pasta selecionada\
 Acesse a pasta criada pelo git `cd <nome da pasta>` (raiz do projeto).
 
+```
 <npm install>
-
+```
 Após realizar o clone do projeto, faça a instalação dos pacotes do Node.js\
 O Node irá baixar as dependências necessárias que foram utilizadas no desenvolvimento do projeto.
 Após finalizar, verifique se a pasta `node_modules` foi criada.
-...
-<npm run dev>
-...
 
+```
+<npm run dev>
+```
 Após realizar a instalação das dependências, inicie a aplicação\
 O comando abre a aplicação React JS em modo de desenvolvedor\
 Abra [http://localhost:5173](http://localhost:5173)\
