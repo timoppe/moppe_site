@@ -17,7 +17,7 @@ Digite o comando: `git -v` no terminal e verifique se há retorno da versão do 
 
 Em ambas as instalações, caso haja algum erro com o comando, será preciso adicionar a pasta de instalação nas variáveis de ambiente do sistema operacional.
 
-## 🚀 Instalação e comandos
+## ☕ Instalação e comandos
 
 Caso não tenha o projeto baixado na máquina: \
 Abra o prompt na pasta que deseja baixar o projeto e digite:\
@@ -46,7 +46,7 @@ Os erros de compilação são mostrados no console.
 
 Não fechar o console, ele mantém a aplicação rodando.
 
-## Implantação no servidor WEB
+## 🚀 Implantação no servidor WEB
 
 A aplicação esta hospedada na plataforma [Vercel](https://vercel.com/)
 
@@ -73,7 +73,7 @@ git merge development
 5 - Volte ao GitHub e verifique se a opção de pull request apareceu e aprove o pull request.\
 6 - Aguarde alguns minutos para a aplicação ser atualizada.
 
-## Recomendações
+## 🤝 Recomendações
 
 - Nunca alterar diretamente a branch master sem conhecimento, nela se encontra a aplicação em produção
 - Sempre suba as alterações realizadas na branch de desenvolvimento `development`
@@ -84,7 +84,7 @@ git merge development
 - Descrever nos commmits as alterações feitas para documentar o que foi feito
 - Para correção de bugs ou erros, criar uma nova issue, caso hajam problemas ou bugs relacionados, criar um milestone.
 
-## Leia mais
+## 📝 Leia mais
 
 Para saber mais sobre o React JS acesse a [documentação sobre criação do aplicativo React](https://facebook.github.io/create-react-app/docs/getting-started)
 
