@@ -6,6 +6,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+body p {
+  color: #000;
+}
+
 input::placeholder,
 textarea::placeholder {
   font-family: "Montserrat", sans-serif;

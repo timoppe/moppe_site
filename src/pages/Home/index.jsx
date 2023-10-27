@@ -1,5 +1,17 @@
 // CSS
-import styles from './Home.module.css';
+import {
+  Container,
+  Banner,
+  BannerMobile,
+  ConteudoBanner,
+  Slider,
+  BoxDiferenciais,
+  BoxColumn,
+  Diferenciais,
+  TitleCiclos,
+  ContainerCiclos,
+  ImgTitle,
+} from './styles'; 
 
 // Images slider
 import Depoimento1 from '../../assets/images/home/depoimentos/depoimento1.png';
@@ -152,21 +164,16 @@ const Home = () => {
     };
 
   return (
-    <div className={styles.home}>
-        {/* Banner mobile */}
-        <section className={styles.banner_mobile}>
-            {/* <div className={styles.text_banner}>
-            </div> */}
-        </section>
-        {/* Banner desktop */}
+    <Container>
+        <BannerMobile/>
         <motion.div
           initial={{opacity: 0}}
           animate={{opacity: 1}}
           transition={{duration: 0.5}}
         >
-          <section className={styles.banner}>
-            <div className={styles.conteudo_banner}>
-              <h2 className={styles.titulo_banner}>
+          <Banner>
+            <ConteudoBanner>
+              <h2>
               <Typewriter
                   onInit={(typewriter) => {
                       typewriter
@@ -179,18 +186,18 @@ const Home = () => {
                   }}
               /> 
               </h2>
-            </div>
-          </section>
+            </ConteudoBanner>
+          </Banner>
         </motion.div>
 
-        <section className={styles.slider}>
+        <Slider>
         <motion.div
           ref={componentRef1}
           initial={{ opacity: 0 }}
           animate={{ opacity: isVisible1 ? 1 : 0 }} 
           transition={{ duration: 1 }}
         >
-          <img src={diferenciais_title} alt="Diferenciais" className={styles.img_title} />
+          <ImgTitle src={diferenciais_title} alt="Diferenciais" />
         </motion.div>
           {animateLine && (
             <motion.hr
@@ -200,63 +207,63 @@ const Home = () => {
               style={{ originX: 0, color:'#ea8923' }}
             />
             )}
-        </section>
-        <section className={styles.slider}>
+        </Slider>
+        <Slider>
           <motion.div
             ref={componentRef2}
             initial={{opacity: 0}}
             animate={{opacity: isVisible2 ? 1 : 0}}
             transition={{duration: 1}}
           >
-            <div className={styles.box_diferenciais}>
-              <div className={styles.box_column}>
-                <div className={styles.diferenciais}>
+            <BoxDiferenciais>
+              <BoxColumn>
+                <Diferenciais>
                   <img src={propostapedagogica} alt="Proposta pedagógica" />
                   <p>Proposta pedagógica única</p>
-                </div>
-                <div className={styles.diferenciais}>
+                </Diferenciais>
+                <Diferenciais>
                   <img src={projetos} alt="Projetos e programas diferenciados" />
                   <p>Projetos e programas diferenciados</p>
-                </div>
-                <div className={styles.diferenciais}>
+                </Diferenciais>
+                <Diferenciais>
                   <img src={smart} alt="Smart" />
                   <p>SMART - programa de língua inglesa da Moppe</p>
-                </div>
-                <div className={styles.diferenciais}>
+                </Diferenciais>
+                <Diferenciais>
                   <img src={valorizacao} alt="Valorização de esportes e artes" />
                   <p>Valorização do esporte e a Arte</p>
-                </div>
-              </div>
-              <div className={styles.box_column}>
-                <div className={styles.diferenciais}>
+                </Diferenciais>
+              </BoxColumn>
+              <BoxColumn>
+                <Diferenciais>
                   <img src={infraestrutura} alt="Infraestrutura" />
                   <p>Infraestrutura moderna e conectada a natureza</p>
-                </div>
-                <div className={styles.diferenciais}>
+                </Diferenciais>
+                <Diferenciais>
                   <img src={pessoas} alt="Pessoas" />
                   <p>Pessoas que dão vida à missão da Moppe</p>
-                </div>
-                <div className={styles.diferenciais}>
+                </Diferenciais>
+                <Diferenciais>
                   <img src={sustentabilidade} alt="Sustentabilidade" />
                   <p>Sustentabilidade</p>
-                </div>
-                <div className={styles.diferenciais}>
+                </Diferenciais>
+                <Diferenciais>
                   <img src={moppe_social} alt="Sustentabilidade" />
                   <p>Moppe social</p>
-                </div>
-              </div>
-            </div>
+                </Diferenciais>
+              </BoxColumn>
+            </BoxDiferenciais>
           </motion.div>
-        </section>
+        </Slider>
         <motion.div
             ref={componentRef3}
             initial={{opacity: 0}}
             animate={{opacity: isVisible3 ? 1 : 0}}
             transition={{duration: 1}}
           >
-          <section className={styles.title_ciclos}>
-            <div className={styles.ciclos}>
-              <img src={ciclos_title} alt="Ciclos" className={styles.img_title} />
+          <TitleCiclos>
+            <div className="ciclos">
+              <ImgTitle src={ciclos_title} alt="Ciclos" />
               {ciclos && (
                 <motion.hr
                   initial={{ width: 0 }}
@@ -266,34 +273,32 @@ const Home = () => {
                 />
 
               )}
-
-
             </div>
-          </section>
-          <section className={styles.container_ciclos}>
-            <div className={styles.containerbox_ciclos}>
-              <div className={styles.carousel_ciclos}>
+          </TitleCiclos>
+          <ContainerCiclos>
+            <div className="containerbox_ciclos">
+              <div className="carousel_ciclos">
                 <Link to="/bercario">
                 <img src={bercario} alt="Bambini" />
                 </Link>
               </div>
-              <div className={styles.carousel_ciclos}>
+              <div className="carousel_ciclos">
                 <Link to="/infantil">
                   <img src={infantil} alt="Infantil" />
                 </Link>
               </div>
-              <div className={styles.carousel_ciclos}>
+              <div className="carousel_ciclos">
                 <Link to="/anosiniciais">
                   <img src={anos_iniciais} alt="Anos iniciais" />
                 </Link>
               </div>
-              <div className={styles.carousel_ciclos}>
+              <div className="carousel_ciclos">
                 <Link to="/anosfinais">
                   <img src={anos_finais} alt="Anos finais" />
                 </Link>
               </div>
             </div>
-          </section>
+          </ContainerCiclos>
         </motion.div>
           <motion.div
             ref={componentRef4}
@@ -301,8 +306,8 @@ const Home = () => {
             animate={{opacity: isVisible4 ? 1 : 0}}
             transition={{duration: 1}}
           >
-            <section className={styles.slider}>
-              <img src={depoimentos_title} alt="Depoimentos" className={styles.img_title}/>
+            <Slider>
+              <ImgTitle src={depoimentos_title} alt="Depoimentos" />
               {depoimentos && (
               <motion.hr
                 initial={{ width: 1 }}
@@ -319,7 +324,7 @@ const Home = () => {
                   infiniteLoop={true} 
                   selectedItem={0} 
                   showStatus={false}
-                  className={styles.custom_carousel}
+                  className="custom_carousel"
                   swipeable={true}
                   emulateTouch={true}>
                     <div>
@@ -355,17 +360,17 @@ const Home = () => {
                   },
                 }}
                 modules={[Pagination]}
-                className={styles.swiper}
+                className="swiper"
               >
-                <SwiperSlide className={styles.swiper_slide}><img src={depoimento1_mobile} alt="Depoimento" /></SwiperSlide>
-                <SwiperSlide className={styles.swiper_slide}><img src={depoimento2_mobile} alt="Depoimento" /></SwiperSlide>
-                <SwiperSlide className={styles.swiper_slide}>Slide 3</SwiperSlide>
+                <SwiperSlide className="swiper_slide"><img src={depoimento1_mobile} alt="Depoimento" /></SwiperSlide>
+                <SwiperSlide className="swiper_slide"><img src={depoimento2_mobile} alt="Depoimento" /></SwiperSlide>
+                <SwiperSlide className="swiper_slide">Slide 3</SwiperSlide>
               </Swiper>
               )}
 
-            </section>
+            </Slider>
           </motion.div>
-    </div>
+    </Container>
   );
 };
 

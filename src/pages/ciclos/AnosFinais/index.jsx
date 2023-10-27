@@ -158,7 +158,7 @@ const AnosFinais = () => {
           transition={{duration: 1.5}}
         >
           <div className={styles.column}>
-            <h1>Rigos acadêmico</h1>
+            <h1>Rigor acadêmico</h1>
             <p>Trabalhamos para reter o máximo de conhecimento dos alunos e para isso metodologias ativas para que aprendam fazendo, sendo agentes do seu aprendizado e estimulados a pensar e não apenas repetir ou decorar. Desta forma ao término do 9º ano nosso alunos estão preparados com uma base forte que sustentará seu caminho de sucesso com autonomia moral e intelectual</p>
           </div>
           <div className={styles.column}>
