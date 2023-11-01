@@ -97,3 +97,8 @@ select option {
     background-color: rgb(255, 132, 0);
     transform: scale(1.01);
   }
+  @media screen and (max-width: 1030px) {
+    .container {
+        overflow-x: hidden;
+    }
+  }

@@ -1,5 +1,16 @@
 //CSS
-import styles from './EstruturaEscolar.module.css';
+import './EstruturaEscolar.module.css';
+import {
+  Container,
+  Banner,
+  Titulo,
+  LinhaTitulo,
+  Conteudo,
+  Box,
+  Column,
+  LinhaTexto,
+  JanelaModal
+} from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -14,6 +25,9 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 //Images
 import Quadra from '../../../assets/images/estrutura_escolar/estruturas/quadra.png';
+import Estudio from '../../../assets/images/estrutura_escolar/estruturas/estudio.png';
+import Turing from '../../../assets/images/estrutura_escolar/estruturas/turing.png';
+import Artes from '../../../assets/images/estrutura_escolar/estruturas/artes.png';
 
 import title_page from '../../../assets/images/estrutura_escolar/title_page.png';
 
@@ -164,12 +178,12 @@ const EstruturaEscolar = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <section className={styles.banner}></section>
-      <div className={styles.titulo}>
+    <Container>
+      <Banner/>
+      <Titulo>
         <img src={title_page} alt="Estrutura escolar" />
-      </div>
-      <div className={styles.linha_titulo}>
+      </Titulo>
+      <LinhaTitulo>
         <motion.div
           ref={componentRef1}
           initial={{opacity: 0}}
@@ -185,224 +199,456 @@ const EstruturaEscolar = () => {
             />
           )}
         </motion.div>
-      </div>
-      <div className={styles.conteudo}>
+      </LinhaTitulo>
+      <Conteudo>
         <p>Com uma área total de 12.000m², a Moppe foi pensada e planejada para oferecer inúmeras possibilidades aos alunos em diferentes ambientes.</p>
-      </div>
-      <div className={styles.conteudo}>
-          <div className={styles.box}>
-            <div className={styles.column}>
-              <div className={styles.linha_texto}>
+      </Conteudo>
+      <Conteudo>
+          <Box>
+            <Column>
+              <LinhaTexto>
                 <p onClick={() => openModal(1)}>Quadras <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
-              </div>
-              <Modal
-                isOpen={modal1IsOpen}
-                onRequestClose={() => closeModal(1)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
-              >
-                <h2>Quadras</h2>
-                <hr />
-                <div className={styles.conteudo_modal}>
-                  <img src={Quadra} alt="Quadra" />
-                </div>
-                <button onClick={() => closeModal(1)} className={styles.button_modal}>Fechar</button>
-              </Modal>
-              <p onClick={() => openModal(2)}>Piscina<FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
-              <Modal
-                isOpen={modal2IsOpen}
-                onRequestClose={() => closeModal(2)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
-              >
-                <h2>Piscina</h2>
-                <hr />
-                <p>Conteudo</p>
-                <button onClick={() => closeModal(2)} className={styles.button_modal}>Fechar</button>
-              </Modal>
-              <p onClick={() => openModal(3)}>Parques <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
-              <Modal
-                isOpen={modal3IsOpen}
-                onRequestClose={() => closeModal(3)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
-              >
-                <h2>Parques</h2>
-                <hr />
-                <p>Conteudo</p>
-                <button onClick={() => closeModal(3)} className={styles.button_modal}>Fechar</button>
-              </Modal>
-              <p onClick={() => openModal(4)}>Laboratório <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
-              <Modal
-                isOpen={modal4IsOpen}
-                onRequestClose={() => closeModal(4)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
-              >
-                <h2>Laboratório</h2>
-                <hr />
-                <p>Conteudo</p>
-                <button onClick={() => closeModal(4)} className={styles.button_modal}>Fechar</button>
-              </Modal>
-              <p onClick={() => openModal(5)}>Espaço Maker <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
-              <Modal
-                isOpen={modal5IsOpen}
-                onRequestClose={() => closeModal(5)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
-              >
-                <h2>Espaço Maker</h2>
-                <hr />
-                <p>Conteudo</p>
-                <button onClick={() => closeModal(5)} className={styles.button_modal}>Fechar</button>
-              </Modal>
-            </div> 
-            <div className={styles.column}>
-              <p onClick={() => openModal(6)}>Estúdio de gravação <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
-              <Modal
-                isOpen={modal6IsOpen}
-                onRequestClose={() => closeModal(6)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
-              >
-                <h2>Estúdio de gravação</h2>
-                <hr />
-                <p>Conteudo</p>
-                <button onClick={() => closeModal(6)} className={styles.button_modal}>Fechar</button>
-              </Modal>
-              <p onClick={() => openModal(7)}>Biblioteca <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
-              <Modal
-                isOpen={modal7IsOpen}
-                onRequestClose={() => closeModal(7)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
-              >
-                <h2>Biblioteca</h2>
-                <hr />
-                <p>Conteudo</p>
-                <button onClick={() => closeModal(7)} className={styles.button_modal}>Fechar</button>
-              </Modal>
-              <p onClick={() => openModal(8)}>Sala de artes <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
-              <Modal
-                isOpen={modal8IsOpen}
-                onRequestClose={() => closeModal(8)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
-              >
-                <h2>Sala de artes</h2>
-                <hr />
-                <p>Conteudo</p>
-                <button onClick={() => closeModal(8)} className={styles.button_modal}>Fechar</button>
-              </Modal>
-              <p onClick={() => openModal(9)}>Lounge <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
-              <Modal
-                isOpen={modal9IsOpen}
-                onRequestClose={() => closeModal(9)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
-              >
-                <h2>Lounge</h2>
-                <hr />
-                <p>Conteudo</p>
-                <button onClick={() => closeModal(9)} className={styles.button_modal}>Fechar</button>
-              </Modal>
-              <p onClick={() => openModal(10)}>Espaço convivência <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
-              <Modal
-                isOpen={modal10IsOpen}
-                onRequestClose={() => closeModal(10)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
-              >
-                <h2>Espaço convivência</h2>
-                <hr />
-                <p>Conteudo</p>
-                <button onClick={() => closeModal(10)} className={styles.button_modal}>Fechar</button>
-              </Modal>
-            </div> 
-            <div className={styles.column}>
+              </LinhaTexto>
+              <JanelaModal>
+                <Modal
+                  isOpen={modal1IsOpen}
+                  onRequestClose={() => closeModal(1)}
+                  style={{
+                    overlay: {
+                      background: '#ececec',
+                      display: 'flex',
+                      alignTtems: 'center',
+                      justifyContent: 'center',
+                    },
+                    content: {
+                      width: '100%',
+                      height: '100vh',
+                      backgroundColor: '#FFF',  
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                    }
+                  }}
+                >
+                  <h2>Quadras</h2>
+                  <hr />
+                  <div className="conteudo_modal">
+                    <img src={Quadra} alt="Quadra" />
+                  </div>
+                  <button onClick={() => closeModal(1)} className="button_modal">Fechar</button>
+                </Modal>
+                <p onClick={() => openModal(2)}>Piscina<FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
+                <Modal
+                  isOpen={modal2IsOpen}
+                  onRequestClose={() => closeModal(2)}
+                  style={{
+                    overlay: {
+                      background: '#ececec',
+                      display: 'flex',
+                      alignTtems: 'center',
+                      justifyContent: 'center',
+                    },
+                    content: {
+                      width: '100%',
+                      height: '100vh',
+                      backgroundColor: '#FFF',  
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                    }
+                  }}
+                >
+                  <h2>Piscina</h2>
+                  <hr />
+                  <p>Conteudo</p>
+                  <button onClick={() => closeModal(2)} className="button_modal">Fechar</button>
+                </Modal>
+                <p onClick={() => openModal(3)}>Parques <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
+                <Modal
+                  isOpen={modal3IsOpen}
+                  onRequestClose={() => closeModal(3)}
+                  style={{
+                    overlay: {
+                      background: '#ececec',
+                      display: 'flex',
+                      alignTtems: 'center',
+                      justifyContent: 'center',
+                    },
+                    content: {
+                      width: '100%',
+                      height: '100vh',
+                      backgroundColor: '#FFF',  
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                    }
+                  }}
+                >
+                  <h2>Parques</h2>
+                  <hr />
+
+                  <button onClick={() => closeModal(3)} className="button_modal">Fechar</button>
+                </Modal>
+                <p onClick={() => openModal(4)}>Laboratório <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
+                <Modal
+                  isOpen={modal4IsOpen}
+                  onRequestClose={() => closeModal(4)}
+                  style={{
+                    overlay: {
+                      background: '#ececec',
+                      display: 'flex',
+                      alignTtems: 'center',
+                      justifyContent: 'center',
+                    },
+                    content: {
+                      width: '100%',
+                      height: '100vh',
+                      backgroundColor: '#FFF',  
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                    }
+                  }}
+                >
+                  <h2>Laboratório</h2>
+                  <hr />
+                  <p>Conteudo</p>
+                  <button onClick={() => closeModal(4)} className="button_modal">Fechar</button>
+                </Modal>
+                <p onClick={() => openModal(5)}>Espaço Maker <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
+                <Modal
+                  isOpen={modal5IsOpen}
+                  onRequestClose={() => closeModal(5)}
+                  style={{
+                    overlay: {
+                      background: '#ececec',
+                      display: 'flex',
+                      alignTtems: 'center',
+                      justifyContent: 'center',
+                    },
+                    content: {
+                      width: '100%',
+                      height: '100vh',
+                      backgroundColor: '#FFF',  
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                    }
+                  }}
+                >
+                  <h2>Espaço Maker</h2>
+                  <hr />
+                  <p>Conteudo</p>
+                  <button onClick={() => closeModal(5)} className="button_modal">Fechar</button>
+                </Modal>
+              </JanelaModal>
+            </Column> 
+            <Column>
+              <JanelaModal>
+                <p onClick={() => openModal(6)}>Estúdio de gravação <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
+                <Modal
+                  isOpen={modal6IsOpen}
+                  onRequestClose={() => closeModal(6)}
+                  style={{
+                    overlay: {
+                      background: '#ececec',
+                      display: 'flex',
+                      alignTtems: 'center',
+                      justifyContent: 'center',
+                    },
+                    content: {
+                      width: '100%',
+                      height: '100vh',
+                      backgroundColor: '#FFF',  
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                    }
+                  }}
+                >
+                  <h2>Estúdio de gravação</h2>
+                  <hr />
+                  <div className="conteudo_modal">
+                    <img src={Estudio} alt="Estudio" />
+                  </div>
+                  <button onClick={() => closeModal(6)} className="button_modal">Fechar</button>
+                </Modal>
+                <p onClick={() => openModal(7)}>Biblioteca <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
+                <Modal
+                  isOpen={modal7IsOpen}
+                  onRequestClose={() => closeModal(7)}
+                  style={{
+                    overlay: {
+                      background: '#ececec',
+                      display: 'flex',
+                      alignTtems: 'center',
+                      justifyContent: 'center',
+                    },
+                    content: {
+                      width: '100%',
+                      height: '100vh',
+                      backgroundColor: '#FFF',  
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                    }
+                  }}
+                >
+                  <h2>Biblioteca</h2>
+                  <hr />
+                  <p>Conteudo</p>
+                  <button onClick={() => closeModal(7)} className="button_modal">Fechar</button>
+                </Modal>
+                <p onClick={() => openModal(8)}>Sala de artes <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
+                <Modal
+                  isOpen={modal8IsOpen}
+                  onRequestClose={() => closeModal(8)}
+                  style={{
+                    overlay: {
+                      background: '#ececec',
+                      display: 'flex',
+                      alignTtems: 'center',
+                      justifyContent: 'center',
+                    },
+                    content: {
+                      width: '100%',
+                      height: '100vh',
+                      backgroundColor: '#FFF',  
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                    }
+                  }}
+                >
+                  <h2>Sala de artes</h2>
+                  <hr />
+                  <div className="conteudo_modal">
+                    <img src={Artes} alt="Sala de artes" />
+                  </div>
+                  <button onClick={() => closeModal(8)} className="button_modal">Fechar</button>
+                </Modal>
+                <p onClick={() => openModal(9)}>Lounge <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
+                <Modal
+                  isOpen={modal9IsOpen}
+                  onRequestClose={() => closeModal(9)}
+                  style={{
+                    overlay: {
+                      background: '#ececec',
+                      display: 'flex',
+                      alignTtems: 'center',
+                      justifyContent: 'center',
+                    },
+                    content: {
+                      width: '100%',
+                      height: '100vh',
+                      backgroundColor: '#FFF',  
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                    }
+                  }}
+                >
+                  <h2>Lounge</h2>
+                  <hr />
+                  <p>Conteudo</p>
+                  <button onClick={() => closeModal(9)} className="button_modal">Fechar</button>
+                </Modal>
+                <p onClick={() => openModal(10)}>Espaço convivência <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
+                <Modal
+                  isOpen={modal10IsOpen}
+                  onRequestClose={() => closeModal(10)}
+                  style={{
+                    overlay: {
+                      background: '#ececec',
+                      display: 'flex',
+                      alignTtems: 'center',
+                      justifyContent: 'center',
+                    },
+                    content: {
+                      width: '100%',
+                      height: '100vh',
+                      backgroundColor: '#FFF',  
+                      borderRadius: '5px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                    }
+                  }}
+                >
+                  <h2>Espaço convivência</h2>
+                  <hr />
+                  <p>Conteudo</p>
+                  <button onClick={() => closeModal(10)} className="button_modal">Fechar</button>
+                </Modal>
+              </JanelaModal>
+            </Column> 
+            <Column>
               <p onClick={() => openModal(11)}>Parede de escalada <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
               <Modal
                 isOpen={modal11IsOpen}
                 onRequestClose={() => closeModal(11)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
+                style={{
+                  overlay: {
+                    background: '#ececec',
+                    display: 'flex',
+                    alignTtems: 'center',
+                    justifyContent: 'center',
+                  },
+                  content: {
+                    width: '100%',
+                    height: '100vh',
+                    backgroundColor: '#FFF',  
+                    borderRadius: '5px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                  }
+                }}
               >
                 <h2>Parede de escalada</h2>
                 <hr />
                 <p>Conteudo</p>
-                <button onClick={() => closeModal(11)} className={styles.button_modal}>Fechar</button>
+                <button onClick={() => closeModal(11)} className="button_modal">Fechar</button>
               </Modal>
               <p onClick={() => openModal(12)}>Espaço taco <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
               <Modal
                 isOpen={modal12IsOpen}
                 onRequestClose={() => closeModal(12)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
+                style={{
+                  overlay: {
+                    background: '#ececec',
+                    display: 'flex',
+                    alignTtems: 'center',
+                    justifyContent: 'center',
+                  },
+                  content: {
+                    width: '100%',
+                    height: '100vh',
+                    backgroundColor: '#FFF',  
+                    borderRadius: '5px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                  }
+                }}
               >
                 <h2>Espaço taco</h2>
                 <hr />
                 <p>Conteudo</p>
-                <button onClick={() => closeModal(12)} className={styles.button_modal}>Fechar</button>
+                <button onClick={() => closeModal(12)} className="button_modal">Fechar</button>
               </Modal>
               <p onClick={() => openModal(13)}>Espaço jogos <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
               <Modal
                 isOpen={modal13IsOpen}
                 onRequestClose={() => closeModal(13)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
+                style={{
+                  overlay: {
+                    background: '#ececec',
+                    display: 'flex',
+                    alignTtems: 'center',
+                    justifyContent: 'center',
+                  },
+                  content: {
+                    width: '100%',
+                    height: '100vh',
+                    backgroundColor: '#FFF',  
+                    borderRadius: '5px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                  }
+                }}
               >
                 <h2>Espaço jogos</h2>
                 <hr />
                 <p>Conteudo</p>
-                <button onClick={() => closeModal(13)} className={styles.button_modal}>Fechar</button>
+                <button onClick={() => closeModal(13)} className="button_modal">Fechar</button>
               </Modal>
               <p onClick={() => openModal(14)}>Espaço verde <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
               <Modal
                 isOpen={modal14IsOpen}
                 onRequestClose={() => closeModal(14)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
+                style={{
+                  overlay: {
+                    background: '#ececec',
+                    display: 'flex',
+                    alignTtems: 'center',
+                    justifyContent: 'center',
+                  },
+                  content: {
+                    width: '100%',
+                    height: '100vh',
+                    backgroundColor: '#FFF',  
+                    borderRadius: '5px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                  }
+                }}
               >
                 <h2>Espaço verde</h2>
                 <hr />
                 <p>Conteudo</p>
-                <button onClick={() => closeModal(14)} className={styles.button_modal}>Fechar</button>
+                <button onClick={() => closeModal(14)} className="button_modal">Fechar</button>
               </Modal>
               <p onClick={() => openModal(15)}>Sala de programação <FontAwesomeIcon icon={faArrowRight} beatFade size="2xs" style={{color: "#ea8923",}} /></p>
               <Modal
                 isOpen={modal15IsOpen}
                 onRequestClose={() => closeModal(15)}
-                contentLabel='Example modal'
-                overlayClassName={styles.modal_overlay}
-                className={styles.modal_content}
+                style={{
+                  overlay: {
+                    background: '#ececec',
+                    display: 'flex',
+                    alignTtems: 'center',
+                    justifyContent: 'center',
+                  },
+                  content: {
+                    width: '100%',
+                    height: '100vh',
+                    backgroundColor: '#FFF',  
+                    borderRadius: '5px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                  }
+                }}
               >
                 <h2>Sala de programação</h2>
                 <hr />
-                <div className={styles.conteudo_modal}>
-                
-                </div>
-                <p>Conteudo</p>
-                <button onClick={() => closeModal(15)} className={styles.button_modal}>Fechar</button>
+                <div className="conteudo_modal">
+                    <img src={Turing} alt="Laboratório de informática" />
+                  </div>
+                <button onClick={() => closeModal(15)} className="button_modal">Fechar</button>
               </Modal>
-            </div> 
-          </div>
-      </div>
+            </Column> 
+          </Box>
+      </Conteudo>
       
-    </div>
+    </Container>
   )
 }
 

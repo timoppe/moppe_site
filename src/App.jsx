@@ -1,19 +1,31 @@
+// App.jsx
+
+
+// Hooks
 import { useState, useEffect } from 'react';
 import { useAuthentication } from './hooks/useAuthentication';
 
+// Integrations
 import ReactGA4 from 'react-ga4';
-import { useLocation } from 'react-router-dom';
-import { onAuthStateChanged } from 'firebase/auth';
+import { initializeGoogleAds } from './components/integrations/GoogleAds';
+import RDStation from './components/integrations/RDStation';
+import BlipChat from './components/integrations/BlipChat';
 
+
+import { useLocation } from 'react-router-dom';
+
+// Context
+import { onAuthStateChanged } from 'firebase/auth';
 import { AuthProvider } from './context/AuthContext';
+
+// Components
 import Navbar from './components/Navbar';
 import NavbarMobile from './components/NavbarMobile';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import RDStation from './components/RDStation';
-import BlipChat from './components/BlipChat';
 import Modal from 'react-modal';
 
+// Routes
 import AppRoutes from './Routes';
 
 Modal.setAppElement('#root');
@@ -53,6 +65,12 @@ function App() {
     ReactGA4.initialize("G-432DY2Q7TC");
     setInitialized(true);
   }, []);
+  
+  // Inicia o google ADS
+  useEffect(() => {
+    initializeGoogleAds();
+  }, [])
+
   // Verifica se o GA4 iniciou e envia os dados para o google
   useEffect(() => {
     
@@ -62,6 +80,7 @@ function App() {
     }
   }, [initialized, location]);
 
+  // Verifica o estado de autenticação e exibe mensagem de carregamento
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setUser(user);

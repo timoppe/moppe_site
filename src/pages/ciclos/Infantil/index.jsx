@@ -1,5 +1,5 @@
 //CSS
-import styles from './Infantil.module.css';
+import { Container, Banner, Titulo, LinhaTitulo, Img1, Img2, Img3, BoxImages, ImgEstFis, BoxMuitoMais, TitleEstrutura, Column, Box } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -54,7 +54,7 @@ const Infantil = () => {
 
   const [isVisible1, setIsVisible1] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
-  const [isVisible3, setIsVisible3] = useState(false);
+  //const [isVisible3, setIsVisible3] = useState(false);
   const [isVisible4, setIsVisible4] = useState(false);
   const [isVisible5, setIsVisible5] = useState(false);
   const [isVisible6, setIsVisible6] = useState(false);
@@ -63,7 +63,7 @@ const Infantil = () => {
 
   const componentRef1 = useRef(null);
   const componentRef2 = useRef(null);
-  const componentRef3 = useRef(null);
+  //const componentRef3 = useRef(null);
   const componentRef4 = useRef(null);
   const componentRef5 = useRef(null);
   const componentRef6 = useRef(null);
@@ -76,9 +76,9 @@ const Infantil = () => {
   useIntersectionObserver(componentRef2, () => {
     setIsVisible2(true);
   });
-  useIntersectionObserver(componentRef3, () => {
-    setIsVisible3(true);
-  });
+  // useIntersectionObserver(componentRef3, () => {
+  //   setIsVisible3(true);
+  // });
   useIntersectionObserver(componentRef4, () => {
     setIsVisible4(true);
   });
@@ -97,12 +97,12 @@ const Infantil = () => {
 
 
   return (
-    <div className={styles.container}>
-      <section className={styles.banner} />
-      <div className={styles.titulo}>
+    <Container>
+      <Banner />
+      <Titulo>
         <img src={title_page} alt="Infantil"/>
-      </div>
-      <div className={styles.linha_titulo}>
+      </Titulo>
+      <LinhaTitulo>
         <motion.div
               ref={componentRef9}
               initial={{opacity: 0}}
@@ -118,7 +118,7 @@ const Infantil = () => {
           />
           )}
         </motion.div>
-      </div>
+      </LinhaTitulo>
       <div className="box_conteudo">
       <motion.div
           className="conteudo"
@@ -127,14 +127,17 @@ const Infantil = () => {
           animate={{opacity: isVisible1 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <p>O desenvolvimento do currículo da Educação Infantil está centrado no descobrimento de si mesmo e do meio em que a criança vive.</p>
-            <p>Acreditamos que a vivência, a prática, a investigação e a resolução de situações-problema são os caminhos para a aprendizagem.</p>
-            <p>A Moppe é um grande palco para essas experiências, pois conta com um ambiente que estimula a criatividade, a autonomia e a curiosidade dos alunos.</p>
-          </div>
-          <div className={styles.column}>
-            <img src={img1} alt="Infantil" className={styles.img1}/>
-          </div>
+          <Box>
+            <Column>
+              <p>O desenvolvimento do currículo da Educação Infantil está centrado no descobrimento de si mesmo e do meio em que a criança vive.</p>
+              <p>Acreditamos que a vivência, a prática, a investigação e a resolução de situações-problema são os caminhos para a aprendizagem.</p>
+              <p>A Moppe é um grande palco para essas experiências, pois conta com um ambiente que estimula a criatividade, a autonomia e a curiosidade dos alunos.</p>
+            </Column>
+            <Column>
+              <Img1 src={img1} alt="Infantil" />
+            </Column>
+          </Box>
+
         </motion.div>
         <motion.div
           className="conteudo"
@@ -143,28 +146,31 @@ const Infantil = () => {
           animate={{opacity: isVisible2 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={img1_diversidade} alt="Infantil" className={styles.img2}/>
-          </div>
-          <div className={styles.column}>
-            <h1>Diversidade de propostas e materiais</h1>
-            <p>Culinária, música, educação física, inglês, biblioteca, entre outras...</p>
-            <p>Vamos além de uma aprendizagem baseada somente em transmissão de conteúdo e informações. Articulamos situações diferenciadas em sua rotina escolar, e cuidamos do ambiente para que a aprendizagem ocorra garantindo a participação ativa da criança. A escolha dos materiais, a linguagem que eles indicam, a forma como estão dispostos potencializam as experiências das crianças, convidando-as a desenvolver a autonomia para o criar, o aprender, o pesquisar e o investigar.</p>
-          </div>
+          <Box>
+            <Column>
+              <Img2 src={img1_diversidade} alt="Infantil" />
+            </Column>
+            <Column>
+              <h1>Diversidade de propostas e materiais</h1>
+              <p>Culinária, música, educação física, inglês, biblioteca, entre outras...</p>
+              <p>Vamos além de uma aprendizagem baseada somente em transmissão de conteúdo e informações. Articulamos situações diferenciadas em sua rotina escolar, e cuidamos do ambiente para que a aprendizagem ocorra garantindo a participação ativa da criança. A escolha dos materiais, a linguagem que eles indicam, a forma como estão dispostos potencializam as experiências das crianças, convidando-as a desenvolver a autonomia para o criar, o aprender, o pesquisar e o investigar.</p>
+            </Column>
+          </Box>
+
         </motion.div>
         <motion.div
           className="conteudo"
-          ref={componentRef3}
+          ref={componentRef2}
           initial={{opacity: 0}}
-          animate={{opacity: isVisible3 ? 1 : 0}}
+          animate={{opacity: isVisible2 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.box_images}>
+          <BoxImages>
             <img src={img2_diversidade} alt="Infantil" />
             <img src={img3_diversidade} alt="Infantil" />
-            <img src={img4_diversidade}alt="Infantil" />
+            <img src={img4_diversidade} alt="Infantil" />
             <img src={img5_diversidade} alt="Infantil" />
-          </div>
+          </BoxImages>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -173,14 +179,16 @@ const Infantil = () => {
           animate={{opacity: isVisible4 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <h1>Projetos investigativos</h1>
-            <p>Os projetos partem da observação das crianças, alimentadas pelas intervenções do professor, com sua escuta ativa, para fazer pensar, imaginar, levantar hipóteses, planejar e resolver problemas.</p>
-            <p>Assim, as experiências de investigação e construção do conhecimento tornam-se significativas.</p>
-          </div>
-          <div className={styles.column}>
-            <img src={img2} alt="Infantil" className={styles.img3}/>
-          </div>
+          <Box>
+            <Column>
+              <h1>Projetos investigativos</h1>
+              <p>Os projetos partem da observação das crianças, alimentadas pelas intervenções do professor, com sua escuta ativa, para fazer pensar, imaginar, levantar hipóteses, planejar e resolver problemas.</p>
+              <p>Assim, as experiências de investigação e construção do conhecimento tornam-se significativas.</p>
+            </Column>
+            <Column>
+              <Img2 src={img2} alt="Infantil" />
+            </Column>
+          </Box>
         </motion.div>
       
         <motion.div
@@ -190,56 +198,60 @@ const Infantil = () => {
           animate={{opacity: isVisible5 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={img2_projetos} alt="Infantil" className={styles.img4}/>
-          </div>
-          <div className={styles.column}>
-            <h1>Ambiente socializador</h1>
-            <p>Consideramos a criança pequena como um sujeito capaz. Nosso currículo é apoiado em experiências que promovam a construção da identidade, as interações, os saberes do corpo, as múltiplas expressões e a linguagem. </p>
-          </div>
+          <Box>
+            <Column>
+              <Img2 src={img2_projetos} alt="Infantil" />
+            </Column>
+            <Column>
+              <h1>Ambiente socializador</h1>
+              <p>Consideramos a criança pequena como um sujeito capaz. Nosso currículo é apoiado em experiências que promovam a construção da identidade, as interações, os saberes do corpo, as múltiplas expressões e a linguagem. </p>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
           ref={componentRef6}
           initial={{opacity: 0}}
-          animate={{opacity: isVisible6 ? 1 : 0}}
+          animate={{opacity: isVisible6 ? 1 : 1}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-          <h1 className={styles.title_estrutura}>Estrutura física como &quot;Quintal do saber&quot;</h1>
-            <p>Os espaços, externos e internos, são pensados e organizados para provocar a construção do conhecimento, despertar a curiosidade e a criatividade. Aqui há espaço para perguntas, experimentação e descobertas incríveis! </p>
-            <div className={styles.img_estfisica}>
-              <img src={img2_estrutura} alt="Estrutura" />
-              <img src={img3_estrutura} alt="Estrutura" />
-            </div>
-          </div>
-          <div className={styles.column}>
-            <img src={img_estrutura} alt="Infantil" className={styles.img5}/>
-          </div>
+          <Box>
+            <Column>
+            <TitleEstrutura>Estrutura física como &quot;Quintal do saber&quot;</TitleEstrutura>
+              <p>Os espaços, externos e internos, são pensados e organizados para provocar a construção do conhecimento, despertar a curiosidade e a criatividade. Aqui há espaço para perguntas, experimentação e descobertas incríveis! </p>
+              <ImgEstFis>
+                <img src={img2_estrutura} alt="Estrutura" />
+                <img src={img3_estrutura} alt="Estrutura" />
+              </ImgEstFis>
+            </Column>
+            <Column>
+              <Img3 src={img_estrutura} alt="Infantil" />
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
           ref={componentRef7}
           initial={{opacity: 0}}
-          animate={{opacity: isVisible7 ? 1 : 0}}
+          animate={{opacity: isVisible7 ? 1 : 1}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
+          <Column>
             <div>
               <h1>Muito mais...</h1>
-              <div className={styles.box_muito_mais}>
+              <BoxMuitoMais>
                 <img src={ed_fisica} alt="Estrutura" />
                 <img src={livro} alt="Estrutura" />
                 <img src={musica} alt="Estrutura" />
                 <img src={smart} alt="Estrutura" />
                 <img src={culinaria} alt="Estrutura" />
                 <img src={historia} alt="Estrutura" />
-              </div>
+              </BoxMuitoMais>
             </div>
-          </div>
+          </Column>
         </motion.div>
       </div>
-    </div>
+    </Container>
   )
 }
 

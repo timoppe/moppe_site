@@ -86,18 +86,6 @@
     .container {
         overflow-x: hidden;
     }
-    .title_banner {
-        margin-left: 30%;
-        width: 60%;
-        height: 35%;
-        text-align: center;
-    }
-    .img_title img {
-        width: 80vw;
-    }
-    .conteudo {
-        flex-direction: column;
-    }
     .column img {
         width: 70vw;
         padding-top: 20px;
@@ -105,19 +93,10 @@
     .column {
         width: 100vw;
     }
-    .conteudo1 {
-        text-align: center;
-    }
     .box_images {
         flex-direction: column;
     }
     .box_images img {
         width: 50vw;
-    }
-    .column2 {
-        flex-direction: column;
-    }
-    .images_muito_mais img{
-        width: 60vw;
     }
 }

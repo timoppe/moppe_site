@@ -1,5 +1,5 @@
 //CSS
-import styles from './Atividades.module.css';
+import { Container, Banner, Titulo, LinhaTitulo, Img1, Box } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -50,12 +50,12 @@ const Atividades = () => {
       setIsVisible2(true);
     });
     return (
-    <div className={styles.container}>
-      <section className={styles.banner} />
-      <div className={styles.titulo}>
+    <Container>
+      <Banner />
+      <Titulo>
         <img src={titulo} alt="CEC" />
-      </div>
-      <div className={styles.linha_titulo}>
+      </Titulo>
+      <LinhaTitulo>
         <motion.div
                 ref={componentRef1}
                 initial={{opacity: 0}}
@@ -71,7 +71,7 @@ const Atividades = () => {
           />
         )}
         </motion.div>
-      </div>
+      </LinhaTitulo>
       <div className="box_conteudo">
         <motion.div
           className="conteudo"
@@ -80,9 +80,9 @@ const Atividades = () => {
           animate={{opacity: isVisible2 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div>
+          <Box>
             <p>As atividades extracurriculares são realizadas através do CEC, o qual visa incentivar os alunos na prática de atividades esportivas e culturais de forma divertida, além de trabalhar com o convívio social, trabalho em equipe, a adoção de hábitos saudáveis no dia a dia das crianças e proporcionar momentos de lazer e entretenimento trabalhando tanto o físco, o lógico como o emocional.</p>
-          </div>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -91,10 +91,10 @@ const Atividades = () => {
           animate={{opacity: isVisible2 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <img src={horarios} alt="CEC" className={styles.img1}/>
+          <Img1 src={horarios} alt="CEC" />
         </motion.div>
       </div>
-    </div>
+    </Container>
   )
 }
 

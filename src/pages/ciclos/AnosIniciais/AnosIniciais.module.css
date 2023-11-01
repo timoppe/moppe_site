@@ -70,15 +70,9 @@
 
 @media screen and (max-width: 1030px) {
     .banner {
-        background-image: url('../../assets/images/banners_mobile/anos_iniciais.png');
+        background-image: url('../../../assets/images/banners_mobile/anos_iniciais.png');
     }
     .container {
         height: 120vh;
-    }
-    .title_banner {
-        margin-left: 30%;
-        width: 60%;
-        height: 35%;
-        text-align: center;
     }
 }

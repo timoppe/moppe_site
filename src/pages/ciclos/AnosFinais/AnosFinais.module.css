@@ -75,20 +75,8 @@ h1 {
     .container {
         overflow: hidden;
     }
-    .container_box {
-        display: block;
-    }
-    .box {
-        margin-bottom: 20px;
-    }
     .img_title {
         width: 80vw;
-    }
-    .box_conteudo {
-        flex-direction: column;
-    }
-    .column, .column2, .column3, .column4 {
-        width: 90vw;
     }
     img {
         width: 100vw;

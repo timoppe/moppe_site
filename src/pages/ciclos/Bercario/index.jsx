@@ -1,5 +1,5 @@
 //CSS
-import styles from './Bercario.module.css';
+import { Container, Banner, Titulo, LinhaTitulo, Box, Column, Box1, Box2, Img1, Img2, Img3 } from './styles';
 
 //Motion
 import { motion } from 'framer-motion';
@@ -81,18 +81,18 @@ const Bercario = () => {
 
 
   return (
-    <div className={styles.container}>
+    <Container>
       <motion.div
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         transition={{duration: 0.5}}
       >
-        <section className={styles.banner}/>
+        <Banner/>
       </motion.div>
-      <div className={styles.titulo}>
+      <Titulo>
         <img src={img_title} alt="Bercario" />
-      </div>
-      <div className={styles.linha_titulo}>
+      </Titulo>
+      <LinhaTitulo>
         <motion.div
                 ref={componentRef7}
                 initial={{opacity: 0}}
@@ -108,7 +108,7 @@ const Bercario = () => {
           />
         )}
         </motion.div>
-      </div>
+      </LinhaTitulo>
       <div className="box_conteudo">
         <motion.div
           className="conteudo"
@@ -117,12 +117,15 @@ const Bercario = () => {
           animate={{opacity: isVisible1 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={img1} alt="Bercario" className={styles.img1}/>
-          </div>
-          <div className={styles.column}>
-            <p>Os primeiros anos da vida do bebê são os mais importantes para o futuro desenvolvimento de suas emoções, inteligência e capacidade motora. Por isso, o Berçário Moppe Bambini oferece às crianças os estímulos adequados em um ambiente planejado, seguro e cercado de muito carinho.</p>
-          </div>
+          <Box>
+            <Column>
+              <Img1 src={img1} alt="Bercario" />
+            </Column>
+            <Column>
+              <p>Os primeiros anos da vida do bebê são os mais importantes para o futuro desenvolvimento de suas emoções, inteligência e capacidade motora. Por isso, o Berçário Moppe Bambini oferece às crianças os estímulos adequados em um ambiente planejado, seguro e cercado de muito carinho.</p>
+            </Column>
+          </Box>
+
         </motion.div>
         <motion.div
           className="conteudo"
@@ -131,13 +134,15 @@ const Bercario = () => {
           animate={{opacity: isVisible2 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <h1>Diversidade de propostas e materiais</h1>
-            <p>Vamos além de uma aprendizagem baseada somente em transmissão de conteúdo e informações. Articulamos situações diferenciadas em sua rotina escolar, e cuidamos do ambiente para que a aprendizagem ocorra garantindo a participação ativa da criança. A escolha dos materiais, a linguagem que eles indicam, a forma como estão dispostos potencializam as experiências das crianças, convidando-as a desenvolver a autonomia para o criar, o aprender, o pesquisar e o investigar.</p>
-          </div>
-          <div className={styles.column}>
-            <img src={img3} alt="Bercario" className={styles.img2}/>
-          </div>
+          <Box>
+            <Column>
+              <h1>Diversidade de propostas e materiais</h1>
+              <p>Vamos além de uma aprendizagem baseada somente em transmissão de conteúdo e informações. Articulamos situações diferenciadas em sua rotina escolar, e cuidamos do ambiente para que a aprendizagem ocorra garantindo a participação ativa da criança. A escolha dos materiais, a linguagem que eles indicam, a forma como estão dispostos potencializam as experiências das crianças, convidando-as a desenvolver a autonomia para o criar, o aprender, o pesquisar e o investigar.</p>
+            </Column>
+            <Column>
+              <Img1 src={img3} alt="Bercario" />
+            </Column>
+          </Box>
         </motion.div>
         <motion.div 
           className="conteudo"
@@ -146,13 +151,16 @@ const Bercario = () => {
           animate={{opacity: isVisible3 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={img4} alt="Bercario" className={styles.img3}/>
-          </div>
-          <div className={styles.column}>
-            <h1>Profissionais diferenciados</h1>
-            <p>O comprometimento e a seriedade com a educação somados ao compromisso em estar em constante inovação e aprimoramento fazem com que a Moppe invista fortemente em formação.  São mais de 7 MIL HORAS Anuais de Capacitação, para oferecermos aos nossos alunos a melhor base.</p>
-          </div>
+          <Box>
+            <Column>
+              <Img1 src={img4} alt="Bercario" />
+            </Column>
+            <Column>
+              <h1>Profissionais diferenciados</h1>
+              <p>O comprometimento e a seriedade com a educação somados ao compromisso em estar em constante inovação e aprimoramento fazem com que a Moppe invista fortemente em formação.  São mais de 7 MIL HORAS Anuais de Capacitação, para oferecermos aos nossos alunos a melhor base.</p>
+            </Column>
+          </Box>
+
         </motion.div>
         <motion.div
          className="conteudo"
@@ -161,10 +169,13 @@ const Bercario = () => {
          animate={{opacity: isVisible4 ? 1 : 0}}
          transition={{duration: 1.5}}
         >
-          <div className={styles.column}>      
+          <Box>
+          <Column>      
               <h1>Espaço físico</h1>
               <p>Planejado para oferecer um ambiente, seguro, limpo, saudável e cercado de afeto para os  bebês a partir do seu 1º ano de vida.</p>
-          </div>  
+          </Column> 
+          </Box>
+ 
         </motion.div>
         <motion.div
          className="conteudo"
@@ -173,9 +184,11 @@ const Bercario = () => {
          animate={{opacity: isVisible5 ? 1 : 0}}
          transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={img2} alt="Bercario" className={styles.img4}/>
-          </div>
+          <Box>
+            <Column>
+              <Img2 src={img2} alt="Bercario" />
+            </Column>
+          </Box>
         </motion.div>
         <motion.div 
           className="conteudo"
@@ -184,41 +197,25 @@ const Bercario = () => {
           animate={{opacity: isVisible6 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <div className={styles.box1}>
-              <h1>Sistema de câmeras de vídeo</h1>
-              <p>Nosso oferece um moderno sistema de câmeras de vídeo, que contribui para a segurança das crianças. Desta forma, os pais podem acompanhar seus filhos enquanto eles estão no Espaço Bambini, por meio de um aplicativo no celular, disponível para Android e iOS.</p>
-              <img src={cameras} alt="Cameras" className={styles.img5}/>
-            </div>
-          </div>
-          <div className={styles.column}>
-            <div className={styles.box2}>
-              <h1>Alimentação balanceada</h1>
-              <p>Toda nossa alimentação é desenvolvida por uma nutricionista, e o cardápio é enviado mensalmente aos pais, que, juntamente com o pediatra, podem adaptá-lo de acordo com as necessidades do seu bebê.</p>
-              <img src={alimentacao} alt="Alimentação balanceada" className={styles.img6}/>
-            </div>
-          </div>
+          <Box>
+            <Column>
+              <Box1>
+                <h1>Sistema de câmeras de vídeo</h1>
+                <p>Nosso oferece um moderno sistema de câmeras de vídeo, que contribui para a segurança das crianças. Desta forma, os pais podem acompanhar seus filhos enquanto eles estão no Espaço Bambini, por meio de um aplicativo no celular, disponível para Android e iOS.</p>
+                <Img3 src={cameras} alt="Cameras" />
+              </Box1>
+            </Column>
+            <Column>
+              <Box2>
+                <h1>Alimentação balanceada</h1>
+                <p>Toda nossa alimentação é desenvolvida por uma nutricionista, e o cardápio é enviado mensalmente aos pais, que, juntamente com o pediatra, podem adaptá-lo de acordo com as necessidades do seu bebê.</p>
+                <Img3 src={alimentacao} alt="Alimentação balanceada" />
+              </Box2>
+            </Column>
+          </Box>
         </motion.div>
-        {/* <motion.div
-          className="conteudo"
-          ref={componentRef7}
-          initial={{opacity: 0}}
-          animate={{opacity: isVisible7 ? 1 : 0}}
-          transition={{duration: 1.5}}
-        >
-          <div className={styles.parte6}>
-            <h1>Aulas e atividades </h1>
-            <div className={styles.box_aulas}>
-              <img src={img3} alt="Aulas" />
-              <img src={img3} alt="Aulas" />
-              <img src={img3} alt="Aulas" />
-              <img src={img3} alt="Aulas" />
-              <img src={img3} alt="Aulas" />
-            </div>
-          </div>
-        </motion.div> */}
       </div>
-    </div>
+    </Container>
   )
 }
 

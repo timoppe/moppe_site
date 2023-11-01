@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // Framer motion
 import { motion, AnimatePresence } from "framer-motion";
@@ -99,7 +99,7 @@ const NavbarMobile = () => {
                                                 whileHover={{backgroundColor: 'rgb(234,137,35)'}}
                                                 whileTap={{scale: 0.9}}
                                             >
-                                                Estrutura escolar
+                                                Estrutura física
                                             </motion.li>
                                         </NavLink>
                                     </motion.div>              
@@ -110,7 +110,7 @@ const NavbarMobile = () => {
                                     style={{ position: 'relative' }}
                                     onClick={() => handleClick(2)}
                                 >
-                                    <p>Ciclos <FontAwesomeIcon icon={faChevronDown} style={{color: "#ffffff",}} /></p>
+                                    <p>Segmentos <FontAwesomeIcon icon={faChevronDown} style={{color: "#ffffff",}} /></p>
                                 </motion.li>
                                 {menuOpen === 2 && (
                                     <motion.div
@@ -160,7 +160,7 @@ const NavbarMobile = () => {
                                     whileHover={{backgroundColor: 'rgb(234,137,35)'}}
                                     whileTap={{scale: 0.9}}
                                 >
-                                    Programa Smart e Bilíngue
+                                    Programa SMART
                                 </motion.li>
                                 </NavLink>
                                 <NavLink to="/atividadesextra">

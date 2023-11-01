@@ -31,6 +31,7 @@ import depoimentos_title from '../../assets/images/home/depoimentos/depoimentos.
 // Depoimentos mobile
 import depoimento1_mobile from '../../assets/images/home/depoimentos/mobile/depoimento1_mobile.png';
 import depoimento2_mobile from '../../assets/images/home/depoimentos/mobile/depoimento2_mobile.png';
+import depoimento3_mobile from '../../assets/images/home/depoimentos/mobile/depoimento3_mobile.png';
 
 //images diferenciais
 import diferenciais_title from '../../assets/images/home/diferenciais/diferenciais.png';
@@ -364,7 +365,7 @@ const Home = () => {
               >
                 <SwiperSlide className="swiper_slide"><img src={depoimento1_mobile} alt="Depoimento" /></SwiperSlide>
                 <SwiperSlide className="swiper_slide"><img src={depoimento2_mobile} alt="Depoimento" /></SwiperSlide>
-                <SwiperSlide className="swiper_slide">Slide 3</SwiperSlide>
+                <SwiperSlide className="swiper_slide"><img src={depoimento3_mobile} alt="Depoimento" /></SwiperSlide>
               </Swiper>
               )}
 

@@ -1,5 +1,5 @@
 //CSS
-import styles from './AMoppe.module.css';
+import { Container, Conteudo, Banner, ConteudoPrincipal, ImgTitle, Box, Column, ImgFoto, ImgTexto, Video } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -52,11 +52,10 @@ const AMoppe = () => {
 
   return (
 
-    <div className={styles.container}>
-        <section className={styles.banner}>
-        </section>
-        <div className={styles.conteudo}>
-            <img src={amoppe} alt="A moppe" className={styles.img_title} />
+    <Container>
+        <Banner />
+        <Conteudo>
+            <ImgTitle src={amoppe} alt="A moppe" />
             <motion.div
                 ref={componentRef1}
                 initial={{opacity: 0}}
@@ -76,35 +75,45 @@ const AMoppe = () => {
               className="conteudo"
               ref={componentRef2}
               initial={{opacity: 0}}
-              animate={{opacity: isVisible2 ? 1 : 0}}
+              animate={{opacity: isVisible2 ? 1 : 1}}
               transition={{duration: 1.5}}
             >
-              <div className={styles.conteudo_principal}>
-                <div className={styles.box}>
-                  <div className={styles.parte1_texto}>
+              <ConteudoPrincipal>
+                <Box>
+                  <Column>
                     <p>
                       Quando um aluno entra pelos portões da Moppe e sente a energia de um ambiente vivo, alegre e pulsante, talvez não imagine o que faz o coração da escola bater. 
                     </p>
                     <p>
-                      É uma vida inteira, com um começo de muita esperança e uma trajetória repleta de realizações. Nessas quatro décadas, seres humanos se formaram e famílias inteiras se transformaram.
+                      É uma vida inteira, com um começo de muita esperança e uma trajetória repleta de realizações. Nessas <b>quatro décadas</b>, seres humanos se formaram e famílias inteiras se transformaram.
                     </p>
                     <p>
                       O começo dessa história, como todas as grandes conquistas, surgiu de um sonho. O desejo de inovar, de ir além do ensino de conteúdos básicos para os estudantes e oferecer mais: autonomia, criatividade, cidadania, senso crítico e ensinar as crianças a pensarem e a resolverem problemas.
                     </p>
-                  </div>
-                </div>
-                <div className={styles.box}>
-                  <div className={styles.parte2_teresinha}>
-                    <img src={box2} alt="Teresinha"/>
-                  </div>
-                  <div className={styles.parte2_fala}>
-                    <img src={fala_teresinha} alt="Teresinha"/>
-                  </div>
-                </div>
-              </div>
+                  </Column>
+                </Box>
+                <Box>
+                  <Column>
+                    <ImgFoto src={box2} alt="Teresinha" />
+                  </Column>
+                  <Column>
+                    <ImgTexto src={fala_teresinha} alt="Teresinha" />
+                  </Column>
+                </Box>
+                <Box>
+                  <Column>
+                    <h1>Quatro décadas de história</h1>
+                  </Column>
+                </Box>
+                <Box>
+                  <Column>
+                    <Video width="700" height="500" src="https://www.youtube.com/embed/-y0KA1MqV9o?si=uG_-flNzGe2Xa1Zi" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Video>
+                  </Column>
+                </Box>
+              </ConteudoPrincipal>
             </motion.div>
-        </div>
-    </div>
+        </Conteudo>
+    </Container>
   )
 }
 

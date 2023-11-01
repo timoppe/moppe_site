@@ -87,17 +87,4 @@
     .container {
         min-height: 100vh;
     }
-    .title_banner {
-        margin-left: 30%;
-        width: 60%;
-        height: 35%;
-        text-align: center;
-    }
-    .container_box {
-        height: 100vh;
-        flex-direction: column;
-    }
-    .title_page img {
-        width: 80vw;
-    }
 }

@@ -1,5 +1,5 @@
 //CSS
-import styles from './Smart.module.css';
+import { Container, Banner, Titulo, LinhaTitulo, Box, Column, Img1, Img2, Img3, Img4, Img5, BoxImages, BoxAlimentacao, BoxAtividades } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -17,6 +17,12 @@ import contratacao3 from '../../assets/images/smart/contratacao3.png';
 import alimentacao from '../../assets/images/smart/alimentacao.png';
 import aulaseatividades from '../../assets/images/smart/aulaseatividades.png';
 import regular from '../../assets/images/smart/regular.png';
+import culinaria from '../../assets/images/smart/Aulas e Atividades/culinaria.png';
+import projetos from '../../assets/images/smart/Aulas e Atividades/projetos.png';
+import musicas from '../../assets/images/smart/Aulas e Atividades/musicas.png';
+import historia from '../../assets/images/smart/Aulas e Atividades/historia.png';
+import soninho from '../../assets/images/smart/Aulas e Atividades/soninho.png';
+import higiene from '../../assets/images/smart/Aulas e Atividades/higiene.png';
 
 function useIntersectionObserver(ref, callback) {
   useEffect(() => {
@@ -93,12 +99,12 @@ const Smart = () => {
 
 
   return (
-    <div className={styles.container}>
-      <section className={styles.banner} />
-      <div className={styles.titulo}>
+    <Container>
+      <Banner />
+      <Titulo>
         <img src={titulo} alt="Smart" />
-      </div>
-      <div className={styles.linha_titulo}>
+      </Titulo>
+      <LinhaTitulo>
         <motion.div
               ref={componentRef9}
               initial={{opacity: 0}}
@@ -114,7 +120,7 @@ const Smart = () => {
           />
           )}
         </motion.div>
-      </div>
+      </LinhaTitulo>
       <div className="box_conteudo">
         <motion.div
           className="conteudo"
@@ -122,15 +128,19 @@ const Smart = () => {
           initial={{opacity: 0}}
           animate={{opacity: isVisible1 ? 1 : 0}}
           transition={{duration: 1.5}}
-        >            
-          <div className={styles.column}>
-            <h1>SMART - Período Regular </h1>
-            <p>As aulas de inglês acontecem para todos os alunos do Infantil II ao 9o ano, com carga horária ampliada e estratégias diversificadas, que preparam os alunos para que, ao final de sua trajetória na Moppe, possam se comunicar com segurança na língua estrangeira e atestar sua proficiência com a certificação dos exames da Cambridge University.</p>
-            <img src={cambridge} alt="Cambridge" />
-          </div>
-          <div className={styles.column}>
-            <img src={regular} alt="Smart" className={styles.img1}/>
-          </div>
+        >          
+          <Box>
+            <Column>
+              <div className="box1">
+                <h1>SMART - Período Regular </h1>
+                <p>As aulas de inglês acontecem para todos os alunos do Infantil II ao 9o ano, com carga horária ampliada e estratégias diversificadas, que preparam os alunos para que, ao final de sua trajetória na Moppe, possam se comunicar com segurança na língua estrangeira e atestar sua proficiência com a certificação dos exames da Cambridge University.</p> 
+              </div>
+              <Img5 src={cambridge} alt="Cambridge" />
+            </Column>
+            <Column>
+              <Img1 src={regular} alt="Smart" />
+            </Column>
+          </Box>  
         </motion.div>
         <motion.div
           className="conteudo"
@@ -139,15 +149,15 @@ const Smart = () => {
           animate={{opacity: isVisible2 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={img3} alt="Bilingue" className={styles.img3}/>
-          </div>
-          <div className={styles.column}>
-            <h1>Programa Bilíngue</h1>
-            <p>Além do período normal de aula, os alunos podem participar do PERÍODO COMPLEMENTAR BILÍNGUE, no qual ficam imersos e vivenciam a língua inglesa no contraturno.</p>
-            <p>A rotina do programa é estruturada por faixa etária e conta com atividades e projetos que contribuem tanto para a aquisição da língua inglesa como para a formação global do aluno.</p>
-            <p>Esses alunos contam também momentos de descanso e descontração, horário de estudo e realização de tarefas, bem como a realização das refeições na escola.</p>
-          </div>
+          <Box>
+            <Column>
+              <Img2 src={img3} alt="Bilingue" />
+            </Column>
+            <Column>
+              <h1>Programa Bilíngue</h1>
+              <p>Os alunos do Infantil III ao 5º ano têm a opção de participar do Período Complementar Bilíngue, uma imersão em inglês no contraturno, que promove a aquisição do idioma e formação global, além de momentos de descanso, horário de estudo, realização de tarefa, refeições e descontração.</p>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -156,8 +166,8 @@ const Smart = () => {
           animate={{opacity: isVisible3 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.diferenciais}>
-            <div className={styles.column}>
+          <Box>
+            <Column>
               <h1>Diferenciais:</h1>
               <ul>
                 <li><p>Professores fluentes e capacitados</p></li>
@@ -168,8 +178,8 @@ const Smart = () => {
                 <li><p>Capacitação semanal dos professores, além de investimento em cursos internos e externos ao longo do ano</p></li>
                 <li><p>Aprendizado da língua inglesa de forma natural, por meio de projetos e atividades diversificadas</p></li>
               </ul>
-            </div>
-          </div>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -178,11 +188,11 @@ const Smart = () => {
           animate={{opacity: isVisible4 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <div className={styles.contratacao}>
+          <Box>
+            <Column>
               <h1>Opções de contratação:</h1>
-            </div>
-          </div>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -191,13 +201,15 @@ const Smart = () => {
           animate={{opacity: isVisible5 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <div className={styles.opcoes}>
-              <img src={contratacao1} alt="Opção 1" />
-              <img src={contratacao2} alt="Opção 2" />
-              <img src={contratacao3} alt="Opção 3" />
-            </div>
-          </div>
+          <Box>
+            <Column>
+              <BoxImages>
+                <img src={contratacao1} alt="Opção 1" />
+                <img src={contratacao2} alt="Opção 2" />
+                <img src={contratacao3} alt="Opção 3" />
+              </BoxImages>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -206,15 +218,21 @@ const Smart = () => {
           animate={{opacity: isVisible6 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.alimentacao}>
-            <div>
-              <h1>Alimentação: Almoço + Lanche</h1>
-            </div>
-            <p>O cardápio servido é elaborado por uma nutricionista e oferecido pela cantina da escola.</p>
-          </div>
-          <div className={styles.column}>
-            <img src={alimentacao} alt="Alimentação" />
-          </div>
+          <Box>
+            <Column>
+              <BoxAlimentacao>
+                <div>
+                  <h1>Alimentação: Almoço + Lanche</h1>
+                </div>
+                <p>O cardápio servido é elaborado por uma nutricionista e oferecido pela cantina da escola.</p>
+              </BoxAlimentacao>
+            </Column>
+            <Column>
+              <Img4 src={alimentacao} alt="Alimentação" />
+            </Column>
+
+          </Box>
+
         </motion.div>
         <motion.div
           className="conteudo"
@@ -223,11 +241,11 @@ const Smart = () => {
           animate={{opacity: isVisible8 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.titulo_atividades}>
-            <div>
+          <Box>
+            <Column>
               <h1>Aulas e atividades</h1>
-            </div>
-          </div>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -236,13 +254,24 @@ const Smart = () => {
           animate={{opacity: isVisible7 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={aulaseatividades} alt="Aulas e atividades" className={styles.img7}/>
-          </div>
+          <Box>
+            <Column>
+              <Img3 src={aulaseatividades} alt="Aulas e atividades" />
+              <BoxAtividades>
+                <img src={culinaria} alt="Culinaria" />
+                <img src={projetos} alt="Projetos" />
+                <img src={musicas} alt="Musicas" />
+                <img src={historia} alt="Historia" />
+                <img src={soninho} alt="Soninho" />
+                <img src={higiene} alt="Higiene" />
+
+              </BoxAtividades>
+            </Column>
+          </Box>
         </motion.div>
       </div>
-    </div>
+    </Container>
   )
 }
 
-export default Smart
+export default Smart;

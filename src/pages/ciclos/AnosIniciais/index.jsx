@@ -1,5 +1,5 @@
 //CC
-import styles from './AnosIniciais.module.css';
+import { Container, Banner, Titulo, LinhaTitulo, Img1, Img2, ImagesMuitomais, Box, Column } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -91,28 +91,28 @@ const AnosIniciais = () => {
   });
 
   return (
-    <div className={styles.container}>
-      <section className={styles.banner} />
-      <div className={styles.titulo}>
+    <Container>
+      <Banner />
+      <Titulo>
         <img src={title_page} alt="Anos iniciais" />
-      </div>
-      <div className={styles.linha_titulo}>
-      <motion.div
-            ref={componentRef9}
-            initial={{opacity: 0}}
-            animate={{opacity: isVisible9 ? 1 : 0}}
-            transition={{duration: 1.5}}
-      >
-        {isVisible9 && (
-        <motion.hr
-          initial={{ width: 0, backgroundColor: '#ea8923', height: '5px', border: 'none' }}
-          animate={{ width: '63%' }}
-          transition={{ type: 'tween', duration: 2 }}
-          style={{ originX: 0 }}
-        />
-        )}
-      </motion.div>
-      </div>
+      </Titulo>
+      <LinhaTitulo>
+        <motion.div
+              ref={componentRef9}
+              initial={{opacity: 0}}
+              animate={{opacity: isVisible9 ? 1 : 0}}
+              transition={{duration: 1.5}}
+        >
+          {isVisible9 && (
+          <motion.hr
+            initial={{ width: 0, backgroundColor: '#ea8923', height: '5px', border: 'none' }}
+            animate={{ width: '63%' }}
+            transition={{ type: 'tween', duration: 2 }}
+            style={{ originX: 0 }}
+          />
+          )}
+        </motion.div>
+      </LinhaTitulo>
       <div className="box_conteudo">
         <motion.div
           className="conteudo"
@@ -121,13 +121,15 @@ const AnosIniciais = () => {
           animate={{opacity: isVisible1 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <p>O Anos Iniciais destina-se à formação da criança de 06 a 10 anos, a fim de desenvolver procedimentos escritores e leitores, raciocínio lógico, habilidades físicas, bem como a compreensão do ambiente natural e social e repertório artístico.</p>
-            <p>Nesta fase, é estruturada a sistematização dos processos pedagógicos, tais como os procedimentos de registro e pesquisa, instrumentos de avaliação e hábito de estudo diário, sem perder de vista uma aprendizagem plena de relações e significado, de incentivo à criatividade e respeito à faixa etária.</p>
-          </div>
-          <div className={styles.column}>
-            <img src={img_inicio} alt="Anos iniciais" className={styles.img1}/>
-          </div>
+          <Box>
+            <Column>
+              <p>O Anos Iniciais destina-se à formação da criança de 06 a 10 anos, a fim de desenvolver procedimentos escritores e leitores, raciocínio lógico, habilidades físicas, bem como a compreensão do ambiente natural e social e repertório artístico.</p>
+              <p>Nesta fase, é estruturada a sistematização dos processos pedagógicos, tais como os procedimentos de registro e pesquisa, instrumentos de avaliação e hábito de estudo diário, sem perder de vista uma aprendizagem plena de relações e significado, de incentivo à criatividade e respeito à faixa etária.</p>
+            </Column>
+            <Column>
+              <Img1 src={img_inicio} alt="Anos iniciais" />
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -145,9 +147,11 @@ const AnosIniciais = () => {
           animate={{opacity: isVisible2 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <p>A escola tem como missão, ser formadora de cidadãos autônomos, baseando-se em teorias científicas e princípios humanistas, e para isso, o trabalho com autonomia moral torna-se essencial.</p>
-          </div>
+          <Box>
+            <Column>
+              <p>A escola tem como missão, ser formadora de cidadãos autônomos, baseando-se em teorias científicas e princípios humanistas, e para isso, o trabalho com autonomia moral torna-se essencial.</p>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -156,13 +160,15 @@ const AnosIniciais = () => {
           animate={{opacity: isVisible3 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={img_autonomia} alt="Autonomia" className={styles.img2}/>
-          </div>
-          <div className={styles.column}>
-            <p>O caminho para a autonomia moral é a constante reflexão sobre os atos, é transformar o conflito em oportunidade de aprendizado, fazendo com que o aluno saiba pensar no coletivo, colocar-se no lugar do outro e responsabilizar-se pelas consequências de suas ações.</p>
-            <p>Somente por meio da reflexão nossos alunos terão oportunidade de construir bons modelos e, assim, construir internamente princípios sólidos que guiem suas ações pela vida.</p>
-          </div>
+          <Box>
+            <Column>
+              <Img2 src={img_autonomia} alt="Autonomia" />
+            </Column>
+            <Column>
+              <p>O caminho para a autonomia moral é a constante reflexão sobre os atos, é transformar o conflito em oportunidade de aprendizado, fazendo com que o aluno saiba pensar no coletivo, colocar-se no lugar do outro e responsabilizar-se pelas consequências de suas ações.</p>
+              <p>Somente por meio da reflexão nossos alunos terão oportunidade de construir bons modelos e, assim, construir internamente princípios sólidos que guiem suas ações pela vida.</p>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -171,15 +177,17 @@ const AnosIniciais = () => {
           animate={{opacity: isVisible4 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <h1>Praticas Signicativas</h1>
-            <p>A Moppe investe fortemente na formação de seus educadores como resultado temos um currículo de qualidade, com práticas pedagógicas ricas e desenvolvidas de forma contextualizada e significativa.</p>
-            <p>A excelência no ensino pode ser observada na qualidade das aulas, onde o aluno, como protagonista, desenvolve as competências necessárias por meio de projetos, trabalhos em grupo, registros significativos, estratégias de estudos dirigidas, estudo do meio, pesquisas entre outras.</p>
-            <p>O processo investigativo faz parte da construção do conhecimento dos alunos. Durante a pesquisa, há a aquisição de conteúdos, de habilidades socioemocionais e de competências que ajudam no desenvolvimento e no senso crítico dos estudantes.</p>
-          </div>
-          <div className={styles.column}>
-            <img src={img_praticas} alt="Praticas" className={styles.img3}/>
-          </div>
+          <Box>
+            <Column>
+              <h1>Praticas Signicativas</h1>
+              <p>A Moppe investe fortemente na formação de seus educadores como resultado temos um currículo de qualidade, com práticas pedagógicas ricas e desenvolvidas de forma contextualizada e significativa.</p>
+              <p>A excelência no ensino pode ser observada na qualidade das aulas, onde o aluno, como protagonista, desenvolve as competências necessárias por meio de projetos, trabalhos em grupo, registros significativos, estratégias de estudos dirigidas, estudo do meio, pesquisas entre outras.</p>
+              <p>O processo investigativo faz parte da construção do conhecimento dos alunos. Durante a pesquisa, há a aquisição de conteúdos, de habilidades socioemocionais e de competências que ajudam no desenvolvimento e no senso crítico dos estudantes.</p>
+            </Column>
+            <Column>
+              <Img2 src={img_praticas} alt="Praticas" />
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -188,13 +196,15 @@ const AnosIniciais = () => {
           animate={{opacity: isVisible5 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={img_trabgrupo} alt="Praticas" className={styles.img4}/>
-          </div>
-          <div className={styles.column}>
-            <h1>Trabalho em Grupo</h1>
-            <p>O trabalho em grupo promove uma sala de aula democrática, onde o professor, com seu planejamento meticuloso, define os papéis dos alunos, e media as relações com o conteúdo, incentivando os estudantes a pensarem por eles próprios, empoderando e respeitando o posicionamento de cada aluno. Um ambiente de segurança e confiança, onde as crianças expõem suas ideias com espontaneidade.</p>
-          </div>
+          <Box>
+            <Column>
+              <Img2 src={img_trabgrupo} alt="Praticas" />
+            </Column>
+            <Column>
+              <h1>Trabalho em Grupo</h1>
+              <p>O trabalho em grupo promove uma sala de aula democrática, onde o professor, com seu planejamento meticuloso, define os papéis dos alunos, e media as relações com o conteúdo, incentivando os estudantes a pensarem por eles próprios, empoderando e respeitando o posicionamento de cada aluno. Um ambiente de segurança e confiança, onde as crianças expõem suas ideias com espontaneidade.</p>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -203,12 +213,14 @@ const AnosIniciais = () => {
           animate={{opacity: isVisible6 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <p>Por meio de situações como criar argumentos baseado em evidências, promover discussão sobre conceitos e ideias, análise se erros, ouvir a opinião dos colegas, entre outras, são situações que trabalham às habilidades a fim de alcançar as competências esperadas para cada faixa etária. Neste contexto, o papel do professor é garantir a participação equitativa e um aprendizado relevante e rigoroso. </p>
-          </div>
-          <div className={styles.column}>
-            <img src={img2_trabgrupo} alt="Praticas" className={styles.img5}/>
-          </div>
+          <Box>
+            <Column>
+              <p>Por meio de situações como criar argumentos baseado em evidências, promover discussão sobre conceitos e ideias, análise se erros, ouvir a opinião dos colegas, entre outras, são situações que trabalham às habilidades a fim de alcançar as competências esperadas para cada faixa etária. Neste contexto, o papel do professor é garantir a participação equitativa e um aprendizado relevante e rigoroso. </p>
+            </Column>
+            <Column>
+              <Img2 src={img2_trabgrupo} alt="Praticas" />
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -223,20 +235,22 @@ const AnosIniciais = () => {
           className="conteudo"
           ref={componentRef8}
           initial={{opacity: 0}}
-          animate={{opacity: isVisible8 ? 1 : 0}}
+          animate={{opacity: isVisible8 ? 1 : 1}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <div className={styles.images_muitomais}>
-              <img src={ed_fisica} alt="Ed física"/>
-              <img src={prog_games} alt="Programação de games" />
-              <img src={musica} alt="Músicas" />
-              <img src={smart} alt="Smart" />
-            </div>
-          </div>
+          <Box>
+            <Column>
+              <ImagesMuitomais>
+                <img src={ed_fisica} alt="Ed física"/>
+                <img src={prog_games} alt="Programação de games" />
+                <img src={musica} alt="Músicas" />
+                <img src={smart} alt="Smart" />
+              </ImagesMuitomais>
+            </Column>
+          </Box>
         </motion.div>
       </div>
-    </div>
+    </Container>
   )
 }
 

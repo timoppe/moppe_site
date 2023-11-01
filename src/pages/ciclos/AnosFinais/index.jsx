@@ -1,5 +1,5 @@
 //CSS
-import styles from './AnosFinais.module.css';
+import { Container, Banner, Titulo, LinhaTitulo, Box, Column, Img1, Img2, ArrayImages, ImgTitle } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -97,12 +97,12 @@ const AnosFinais = () => {
   });
 
   return (
-    <div className={styles.container}>
-      <section className={styles.banner} />
-      <div className={styles.titulo}>
-        <img src={title_page} alt="Anos finais" className={styles.img_title}/>
-      </div>
-      <div className={styles.linha_titulo}>
+    <Container>
+      <Banner />
+      <Titulo>
+        <ImgTitle src={title_page} alt="Anos finais" />
+      </Titulo>
+      <LinhaTitulo>
       <motion.div
             ref={componentRef8}
             initial={{opacity: 0}}
@@ -118,7 +118,7 @@ const AnosFinais = () => {
         />
         )}
       </motion.div>
-      </div>
+      </LinhaTitulo>
       <div className="box_conteudo">
         <motion.div
             className="conteudo"
@@ -127,13 +127,15 @@ const AnosFinais = () => {
             animate={{opacity: isVisible1 ? 1 : 0}}
             transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <p>Desde os primeiros passos do aluno Moppe, busca-se desenvolver a curiosidade, o senso crítico, o protagonismo, a autonomia moral, o comprometimento, a desenvoltura verbal e o trabalho em grupo.</p>
-            <p>Nos anos finais do ensino fundamental (6º ao 9º ano) nossa tríade educacional é consolidada. Nesta fase, os alunos ampliam e solidificam seus conhecimentos, competências e valores humanos necessários lidarem com os desafios acadêmicos, profissionais e pessoais, em busca de uma vida plena e feliz.</p>
-          </div>
-          <div className={styles.column}>
-            <img src={img1} alt="Anos Finais" className={styles.img1}/>
-          </div>
+          <Box>
+            <Column>
+              <p>Desde os primeiros passos do aluno Moppe, busca-se desenvolver a curiosidade, o senso crítico, o protagonismo, a autonomia moral, o comprometimento, a desenvoltura verbal e o trabalho em grupo.</p>
+              <p>Nos anos finais do ensino fundamental (6º ao 9º ano) nossa tríade educacional é consolidada. Nesta fase, os alunos ampliam e solidificam seus conhecimentos, competências e valores humanos necessários lidarem com os desafios acadêmicos, profissionais e pessoais, em busca de uma vida plena e feliz.</p>
+            </Column>
+            <Column>
+              <Img1 src={img1} alt="Anos Finais" />
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -142,13 +144,15 @@ const AnosFinais = () => {
           animate={{opacity: isVisible2 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={img1_competencias} alt="Anos Finais" className={styles.img2}/>
-          </div>
-          <div className={styles.column}>
-            <h1>Desenvolvimento de Competências</h1>
-            <p>Nossas aulas são dinâmicas, onde o aluno é o centro do processo, o estudos dos temas partem de projetos e levantamento de situações problemas que desencadeiam a busca por respostas e elevam o poder de argumentação e a ação pela busca de novos saberes. Desenvolvemos desta forma as competências necessárias para os desafios da vida.</p>
-          </div>
+          <Box>
+            <Column>
+              <Img2 src={img1_competencias} alt="Anos Finais" />
+            </Column>
+            <Column>
+              <h1>Desenvolvimento de Competências</h1>
+              <p>Nossas aulas são dinâmicas, onde o aluno é o centro do processo, o estudos dos temas partem de projetos e levantamento de situações problemas que desencadeiam a busca por respostas e elevam o poder de argumentação e a ação pela busca de novos saberes. Desenvolvemos desta forma as competências necessárias para os desafios da vida.</p>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -157,13 +161,15 @@ const AnosFinais = () => {
           animate={{opacity: isVisible3 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <h1>Rigor acadêmico</h1>
-            <p>Trabalhamos para reter o máximo de conhecimento dos alunos e para isso metodologias ativas para que aprendam fazendo, sendo agentes do seu aprendizado e estimulados a pensar e não apenas repetir ou decorar. Desta forma ao término do 9º ano nosso alunos estão preparados com uma base forte que sustentará seu caminho de sucesso com autonomia moral e intelectual</p>
-          </div>
-          <div className={styles.column}>
-            <img src={img2_competencias} alt="Anos Finais" className={styles.img3}/>
-          </div>
+          <Box>
+            <Column>
+              <h1>Rigor acadêmico</h1>
+              <p>Trabalhamos para reter o máximo de conhecimento dos alunos e para isso metodologias ativas para que aprendam fazendo, sendo agentes do seu aprendizado e estimulados a pensar e não apenas repetir ou decorar. Desta forma ao término do 9º ano nosso alunos estão preparados com uma base forte que sustentará seu caminho de sucesso com autonomia moral e intelectual</p>
+            </Column>
+            <Column>
+              <Img2 src={img2_competencias} alt="Anos Finais" />
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
           className="conteudo"
@@ -172,15 +178,17 @@ const AnosFinais = () => {
           animate={{opacity: isVisible4 ? 1 : 0}}
           transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={img_estrategia} alt="Anos Finais" className={styles.img4}/>
-          </div>
-          <div className={styles.column}>
-            <h1>Trabalho em grupos como estratégia pedagógica</h1>
-            <p>Para a construção de uma aprendizagem ativa e significativa utilizamos o trabalho em grupo em nossas aulas como uma ferramenta poderosa que oferece oportunidades simultâneas para todos os alunos.</p>
-            <p>Juntos e em pequenos grupos (quatro a cinco alunos) trabalham de modo que todos possam participar de uma atividade com tarefas claramente atribuídas e compreender que o trabalho é realizado com a contribuição de todos.</p>
-            <p>Além disso, o trabalho em grupo ajuda o aluno a se tornar uma pessoa melhor, uma vez que ele aprende a ver o grupo como um todo e as metas podem ser mais facilmente atingidas independente de sua própria competência.</p>
-          </div>
+          <Box>
+            <Column>
+              <Img2 src={img_estrategia} alt="Anos Finais" />
+            </Column>
+            <Column>
+              <h1>Trabalho em grupos como estratégia pedagógica</h1>
+              <p>Para a construção de uma aprendizagem ativa e significativa utilizamos o trabalho em grupo em nossas aulas como uma ferramenta poderosa que oferece oportunidades simultâneas para todos os alunos.</p>
+              <p>Juntos e em pequenos grupos (quatro a cinco alunos) trabalham de modo que todos possam participar de uma atividade com tarefas claramente atribuídas e compreender que o trabalho é realizado com a contribuição de todos.</p>
+              <p>Além disso, o trabalho em grupo ajuda o aluno a se tornar uma pessoa melhor, uma vez que ele aprende a ver o grupo como um todo e as metas podem ser mais facilmente atingidas independente de sua própria competência.</p>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
             className="conteudo"
@@ -189,9 +197,11 @@ const AnosFinais = () => {
             animate={{opacity: isVisible5 ? 1 : 0}}
             transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <img src={moppemais} alt="Moppe+"/>
-          </div>
+          <Box>
+            <Column>
+              <Img1 src={moppemais} alt="Moppe+"/>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
             className="conteudo"
@@ -200,42 +210,44 @@ const AnosFinais = () => {
             animate={{opacity: isVisible6 ? 1 : 0}}
             transition={{duration: 1.5}}
         >
-          <div className={styles.column}>
-            <p>Um programa que reúne 12 projetos estudantis destinados aos alunos do ensino fundamental anos finais (6º ao 9º ano).</p>
-          </div>
+          <Box>
+            <Column>
+              <p>Um programa que reúne 12 projetos estudantis destinados aos alunos do ensino fundamental anos finais (6º ao 9º ano).</p>
+            </Column>
+          </Box>
         </motion.div>
         <motion.div
             className="conteudo"
             ref={componentRef7}
             initial={{opacity: 0}}
-            animate={{opacity: isVisible7 ? 1 : 0}}
+            animate={{opacity: isVisible7 ? 1 : 1}}
             transition={{duration: 1.5}}
         >
-          <div className={styles.array_images}>
-            <div className={styles.column}>
+          <ArrayImages>
+            <Column>
               {image_url.slice(0,3).map((url, index) => (
                 <img key={index} src={url} alt={'Imagem ${index'} />
               ))}
-            </div>
-            <div className={styles.column}>
+            </Column>
+            <Column>
               {image_url.slice(3,6).map((url, index) => (
                 <img key={index} src={url} alt={'Imagem ${index'} />
               ))}          
-            </div>
-            <div className={styles.column}>
+            </Column>
+            <Column>
               {image_url.slice(6,9).map((url, index) => (
                 <img key={index} src={url} alt={'Imagem ${index'} />
               ))}      
-            </div>
-            <div className={styles.column}>
+            </Column>
+            <Column>
               {image_url.slice(9,12).map((url, index) => (
                 <img key={index} src={url} alt={'Imagem ${index'} />
               ))}      
-            </div>
-          </div>
+            </Column>
+          </ArrayImages>
         </motion.div>
       </div>
-    </div>
+    </Container>
 
   )
 }

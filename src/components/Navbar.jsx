@@ -70,13 +70,13 @@ const Navbar = () => {
                                 <ul className={`${styles.navbar_dropdown} ${isDropdownOpen.moppe ? styles.open : ''}`}>
                                     <li><NavLink to="/sobre">Sobre a Moppe</NavLink></li>
                                     <li><NavLink to="/propostapedagogica">Proposta Pedagógica</NavLink></li>
-                                    <li><NavLink to="/estruturaescolar">Estrutura Escolar</NavLink></li>
+                                    <li><NavLink to="/estruturaescolar">Estrutura Física</NavLink></li>
                                     {/* <li><NavLink to="/metodologias">Metodologias</NavLink></li>
                                     <li><NavLink to="/depoimentos">Depoimentos</NavLink></li> */}
                                 </ul>
                             </li>
                             <li onMouseEnter={() => handleMouseEnter('ciclos')} onMouseLeave={() => handleMouseLeave('ciclos')}>
-                                <p>Ciclos</p>
+                                <p>Segmentos</p>
                                 <ul className={`${styles.navbar_dropdown} ${isDropdownOpen.ciclos ? styles.open : ''}`}>
                                     <li><NavLink to="/bercario">Berçário</NavLink></li>
                                     <li><NavLink to="/infantil">Infantil</NavLink></li>
@@ -85,7 +85,7 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li>
-                                <NavLink to="/smart"><p>Programa Smart e Bilíngue</p></NavLink>
+                                <NavLink to="/smart"><p>Programa SMART</p></NavLink>
                             </li>
                             <li>
                                 <NavLink to="/atividadesextra"><p>Atividades Extracurriculares</p></NavLink>
