@@ -44,6 +44,8 @@ import pessoas from '../../assets/images/home/diferenciais/pessoas.png';
 import sustentabilidade from '../../assets/images/home/diferenciais/sustentabilidade.png';
 import moppe_social from '../../assets/images/home/diferenciais/moppe_social.png';
 
+// import Banner from '../../assets/images/banners/Home.jpg';
+
 // Motion
 import { motion } from 'framer-motion';
 
