@@ -27,7 +27,7 @@ export const Container = styled.div`
 
 export const Banner = styled.section`
     height: 100vh;
-    background-image: url('../../../src/assets/images/banners/Home.jpg');
+    background-image: url('/src/assets/images/banners/Home.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,7 +41,7 @@ export const Banner = styled.section`
 `;
 
 export const BannerMobile = styled.section`
-    background-image: url('../../../src/assets/images/banners_mobile/home.png');
+    background-image: url('/src/assets/images/banners_mobile/home.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
