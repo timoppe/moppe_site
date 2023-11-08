@@ -13,6 +13,8 @@ import {
   ImgTitle,
 } from './styles'; 
 
+import ImgBanner from '../../assets/images/banner.jpg';
+
 // Images slider
 import Depoimento1 from '../../assets/images/home/depoimentos/depoimento1.png';
 import Depoimento2 from '../../assets/images/home/depoimentos/depoimento2.png';
@@ -174,7 +176,7 @@ const Home = () => {
           animate={{opacity: 1}}
           transition={{duration: 0.5}}
         >
-          <Banner>
+          <Banner imageUrl={ImgBanner}>
             <ConteudoBanner>
               <h2>
               <Typewriter
