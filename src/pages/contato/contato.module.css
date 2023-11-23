@@ -44,6 +44,7 @@ form {
 }
 
 input{
+    width: 400px;
     margin-bottom: 14px;
     height: 34px;
     border-radius: 5px;
@@ -70,7 +71,7 @@ select {
     border: 0;
     padding: 8px;
     height: 34px;
-    width: 200px;
+    width: 400px;
 }
 
 select option {
