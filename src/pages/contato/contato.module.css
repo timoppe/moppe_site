@@ -54,24 +54,22 @@ input{
 }
 
 textarea {
-    margin-left: 120px;
     margin-bottom: 14px;
     border-radius: 5px;
     padding: 8px;
     height: 94px;
-    width: 400px;
+    width: 300px;
     resize: none;
     border: 0.5px solid rgb(234, 137, 35);
 }
 
 select {
-    margin-right: 90px;
     margin-bottom: 14px;
     border-radius: 4px;
     border: 0;
     padding: 8px;
     height: 34px;
-    width: 400px;
+    width: 300px;
 }
 
 select option {
