@@ -17,6 +17,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 import { IMaskInput } from "react-imask";
 
+import { useNavigate } from 'react-router-dom';
+
 function useIntersectionObserver(ref, callback) {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -46,6 +48,7 @@ const Contato = () => {
   const [tel, setTel] = useState('');
   let [tipoMessage, setTipoMessage] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   function sendEmail(e) {
     e.preventDefault();
@@ -72,7 +75,7 @@ const Contato = () => {
       setTel('');
       setTipoMessage('');
       setMessage('');
-      console.log(response);
+      navigate('/');
     }, (err) => {
       alert("Erro interno - A mensagem não foi enviada");
       console.log(err);

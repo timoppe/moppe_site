@@ -222,12 +222,12 @@ const NavbarMobile = () => {
                                         </Link> 
                                     </motion.div>              
                                 )}
-                                <motion.li 
+                                {/* <motion.li 
                                     whileHover={{backgroundColor: 'rgb(234,137,35)'}}
                                     whileTap={{scale: 0.9}}
                                 >
                                     <p>Blog</p>
-                                </motion.li>
+                                </motion.li> */}
                             </ul>
                         </motion.div>
                     </motion.nav>

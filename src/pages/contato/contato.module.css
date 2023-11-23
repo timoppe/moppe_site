@@ -46,8 +46,8 @@ form {
 input{
     margin-bottom: 14px;
     height: 34px;
-    border-radius: 4px;
-    border: 0;
+    border-radius: 5px;
+    border: 0.5px solid rgb(234, 137, 35);
     padding: 0 8px;
     width: 15vw;
 }
@@ -55,12 +55,12 @@ input{
 textarea {
     margin-left: 120px;
     margin-bottom: 14px;
-    border-radius: 4px;
-    border: 0;
+    border-radius: 5px;
     padding: 8px;
     height: 94px;
     width: 400px;
     resize: none;
+    border: 0.5px solid rgb(234, 137, 35);
 }
 
 select {
@@ -100,5 +100,21 @@ select option {
   @media screen and (max-width: 1030px) {
     .container {
         overflow-x: hidden;
+    }
+    form {
+        width: 90vw;
+    }
+    form input {
+        width: 300px;
+    }
+    form select {
+        width: 300px;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    form textarea {
+        width: 300px;
+        margin: 0;
+        margin-bottom: 20px;
     }
   }
