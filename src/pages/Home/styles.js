@@ -25,6 +25,13 @@ export const Container = styled.div`
   }
 `;
 
+export const BannerContent = styled.div`
+    display: block;
+    @media screen and (max-width: 1024px) {     
+        display: none;     
+    }
+`;
+
 export const Banner = styled.section`
     height: 100vh;
     background-image: url(${props => props.imageUrl});
@@ -42,7 +49,6 @@ export const Banner = styled.section`
 
 export const BannerMobile = styled.section`
     background-image: url(${props => props.imageUrl});
-    background-image: url('');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -253,8 +253,8 @@ const Smart = () => {
         <motion.div
           className="conteudo"
           ref={componentRef7}
-          initial={{opacity: 0}}
-          animate={{opacity: isVisible7 ? 1 : 0}}
+          initial={{opacity: 1}}
+          animate={{opacity: isVisible7 ? 1 : 1}}
           transition={{duration: 1.5}}
         >
           <Box>
