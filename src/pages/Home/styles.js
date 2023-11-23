@@ -27,8 +27,7 @@ export const Container = styled.div`
 
 export const Banner = styled.section`
     height: 100vh;
-    /* background-image: url('./src/assets/images/banner.jpg'); */
-    background-image: url(${props => props.imageUrl}); // Use a prop imageUrl para definir o URL da imagem
+    background-image: url(${props => props.imageUrl});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

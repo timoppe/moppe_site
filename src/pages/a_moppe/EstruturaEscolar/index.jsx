@@ -1,5 +1,4 @@
 //CSS
-import './EstruturaEscolar.module.css';
 import {
   Container,
   Banner,
@@ -11,6 +10,9 @@ import {
   LinhaTexto,
   JanelaModal
 } from './styles';
+
+//Image Banner
+import ImgBanner from '../../../assets/images/banners/EstruturaEscolar.png';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -179,7 +181,7 @@ const EstruturaEscolar = () => {
 
   return (
     <Container>
-      <Banner/>
+      <Banner imageUrl={ImgBanner}/>
       <Titulo>
         <img src={title_page} alt="Estrutura escolar" />
       </Titulo>

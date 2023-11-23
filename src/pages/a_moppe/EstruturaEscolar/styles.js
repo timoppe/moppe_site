@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const Banner = styled.section`
     height: 100vh;
     width: 100%;
-    background-image: url('../../../../src/assets/images/banners/EstruturaEscolar.png');
+    background-image: url(${props => props.imageUrl});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

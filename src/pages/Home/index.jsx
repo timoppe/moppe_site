@@ -13,6 +13,7 @@ import {
   ImgTitle,
 } from './styles'; 
 
+// Image Banner
 import ImgBanner from '../../assets/images/banner.jpg';
 
 // Images slider
