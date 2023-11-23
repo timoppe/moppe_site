@@ -1,5 +1,5 @@
 //CSS
-import { Container, Banner, Titulo, LinhaTitulo, Img1, Box } from './styles';
+import { Container, Banner, BannerMobile, Titulo, LinhaTitulo, Img1, Box } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -10,6 +10,8 @@ import { motion } from 'framer-motion';
 //Images
 import horarios from '../../assets/images/cec/horarios.png';
 import titulo from '../../assets/images/cec/titulo.png';
+import ImgBanner from '../../assets/images/banners/Atividades.png';
+import ImgBannerMobile from '../../assets/images/banners_mobile/atividades_extra.png';
 
 function useIntersectionObserver(ref, callback) {
   useEffect(() => {
@@ -51,7 +53,8 @@ const Atividades = () => {
     });
     return (
     <Container>
-      <Banner />
+      <Banner imageUrl={ImgBanner}/>
+      <BannerMobile imageUrl={ImgBannerMobile} />
       <Titulo>
         <img src={titulo} alt="CEC" />
       </Titulo>

@@ -1,5 +1,5 @@
 //CC
-import { Container, Banner, Titulo, LinhaTitulo, Img1, Img2, ImagesMuitomais, Box, Column } from './styles';
+import { Container, Banner, BannerMobile, Titulo, LinhaTitulo, Img1, Img2, ImagesMuitomais, Box, Column } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -18,6 +18,8 @@ import smart from '../../../assets/images/anos_iniciais/smart.png';
 import musica from '../../../assets/images/anos_iniciais/musica.png';
 import prog_games from '../../../assets/images/anos_iniciais/prog_games.png';
 import ed_fisica from '../../../assets/images/anos_iniciais/ed_fisica.png';
+import ImgBanner from '../../../assets/images/banners/AnosIniciais.png';
+import ImgBannerMobile from '../../../assets/images/banners_mobile/anos_iniciais.png';
 
 function useIntersectionObserver(ref, callback) {
   useEffect(() => {
@@ -92,7 +94,8 @@ const AnosIniciais = () => {
 
   return (
     <Container>
-      <Banner />
+      <Banner imageUrl={ImgBanner}/>
+      <BannerMobile imageUrl={ImgBannerMobile} />
       <Titulo>
         <img src={title_page} alt="Anos iniciais" />
       </Titulo>

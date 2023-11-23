@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const Banner = styled.section`
     height: 100vh;
     width: 100%;
-    background-image: url('../../../src/assets/images/banners/Metodologias.jpg');
+    background-image: url(${props => props.imageUrl});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,6 +25,22 @@ export const Banner = styled.section`
     align-items: center;
     justify-content: center;
     box-shadow: rgba(0,0,0, .15) 0 -2px 10px 0px;
+`;
+
+export const BannerMobile =  styled.section`
+    height: 100vh;
+    width: 100%;
+    background-image: url(${props => props.imageUrl});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 1030px) {
+        display: flex;
+    }
 `;
 
 export const TitlePage = styled.div`

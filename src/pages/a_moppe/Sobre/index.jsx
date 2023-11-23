@@ -1,5 +1,5 @@
 //CSS
-import { Container, Conteudo, Banner, ConteudoPrincipal, ImgTitle, Box, Column, ImgFoto, ImgTexto, Video } from './styles';
+import { Container, Conteudo, Banner, BannerMobile, ConteudoPrincipal, ImgTitle, Box, Column, ImgFoto, ImgTexto, Video } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -11,6 +11,8 @@ import { motion } from 'framer-motion';
 import amoppe from '../../../assets/images/amoppe/amoppe.png';
 import box2 from '../../../assets/images/amoppe/box2/teresinha.png';
 import fala_teresinha from '../../../assets/images/amoppe/box2/fala_teresinha.png';
+import ImgBanner from '../../../assets/images/banners/Amoppe.png';
+import ImgBannerMobile from '../../../assets/images/banners_mobile/amoppe.png';
 
 function useIntersectionObserver(ref, callback) {
   useEffect(() => {
@@ -53,7 +55,8 @@ const AMoppe = () => {
   return (
 
     <Container>
-        <Banner />
+        <Banner imageUrl={ImgBanner}/>
+        <BannerMobile imageUrl={ImgBannerMobile} />
         <Conteudo>
             <ImgTitle src={amoppe} alt="A moppe" />
             <motion.div

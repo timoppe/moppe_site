@@ -22,7 +22,7 @@ export const Container = styled.div`
 export const Banner = styled.section`
     height: 100vh;
     width: 100%;
-    background-image: url('../../../../src/assets/images/banners/AnosFinais.png');
+    background-image: url(${props => props.imageUrl});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,7 +32,23 @@ export const Banner = styled.section`
     margin-bottom: 40px;
 
     @media screen and (max-width: 1030px) {
-        background-image: url('../../../../src/assets/images/banners_mobile//anos_finais.png');
+        display: none;
+    }
+`;
+
+export const BannerMobile =  styled.section`
+    height: 100vh;
+    width: 100%;
+    background-image: url(${props => props.imageUrl});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 1030px) {
+        display: flex;
     }
 `;
 

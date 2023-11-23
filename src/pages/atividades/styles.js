@@ -13,13 +13,33 @@ export const Container = styled.div`
 export const Banner = styled.section`
     height: 100vh;
     width: 100%;
-    background-image: url('../../../../src/assets/images/banners/Atividades.png');
+    background-image: url(${props => props.imageUrl});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 1030px) {
+        display: none;
+    }
+`;
+
+export const BannerMobile =  styled.section`
+    height: 100vh;
+    width: 100%;
+    background-image: url(${props => props.imageUrl});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 1030px) {
+        display: flex;
+    }
 `;
 
 export const Titulo = styled.div`

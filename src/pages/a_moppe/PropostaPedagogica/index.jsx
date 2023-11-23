@@ -1,10 +1,13 @@
 //CSS
-import { Container, Banner, Titulo, LinhaTitulo, ImgTitulo, Column, Img, Img2, Box } from './styles';
+import { Container, Banner, BannerMobile, Titulo, LinhaTitulo, ImgTitulo, Column, Img, Img2, Box } from './styles';
 
 //Images
 import Triade from '../../../assets/images/proposta_pedagogica/Triade.png';
 import titulo from '../../../assets/images/proposta_pedagogica/titulo.png';
 import Unesco from '../../../assets/images/proposta_pedagogica/unesco.png';
+import ImgBanner from '../../../assets/images/banners/PropostaPedagogica.png';
+import ImgBannerMobile from '../../../assets/images/banners_mobile/proposta_pedagogica.png';
+
 //Hooks
 import { useState, useEffect, useRef } from 'react';
 
@@ -56,7 +59,8 @@ const PropostaPedagogica = () => {
 
   return (
     <Container>
-      <Banner />
+      <Banner imageUrl={ImgBanner} />
+      <BannerMobile imageUrl={ImgBannerMobile} />
       <Titulo> 
         <ImgTitulo src={titulo} alt="Proposta pedagógica" />
       </Titulo>

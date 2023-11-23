@@ -1,5 +1,5 @@
 //CSS
-import { Container, Banner, Titulo, LinhaTitulo, Box, Column, Box1, Box2, Img1, Img2, Img3 } from './styles';
+import { Container, Banner, BannerMobile, Titulo, LinhaTitulo, Box, Column, Box1, Box2, Img1, Img2, Img3 } from './styles';
 
 //Motion
 import { motion } from 'framer-motion';
@@ -15,6 +15,8 @@ import img3 from '../../../assets/images/bercario/img3.png';
 import img4 from '../../../assets/images/bercario/img4.png';
 import cameras from '../../../assets/images/bercario/cameras.png';
 import alimentacao from '../../../assets/images/bercario/alimentacao.png';
+import ImgBanner from '../../../assets/images/banners/Bercario.png';
+import ImgBannerMobile from '../../../assets/images/banners_mobile/bambini.png';
 
 function useIntersectionObserver(ref, callback) {
   useEffect(() => {
@@ -87,7 +89,8 @@ const Bercario = () => {
         animate={{opacity: 1}}
         transition={{duration: 0.5}}
       >
-        <Banner/>
+        <Banner imageUrl={ImgBanner}/>
+        <BannerMobile imageUrl={ImgBannerMobile} />
       </motion.div>
       <Titulo>
         <img src={img_title} alt="Bercario" />

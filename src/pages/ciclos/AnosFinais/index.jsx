@@ -1,5 +1,5 @@
 //CSS
-import { Container, Banner, Titulo, LinhaTitulo, Box, Column, Img1, Img2, ArrayImages, ImgTitle } from './styles';
+import { Container, Banner, BannerMobile, Titulo, LinhaTitulo, Box, Column, Img1, Img2, ArrayImages, ImgTitle } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -26,6 +26,8 @@ import moppe9 from '../../../assets/images/anos_finais/moppe9.png';
 import moppe10 from '../../../assets/images/anos_finais/moppe10.png';
 import moppe11 from '../../../assets/images/anos_finais/moppe11.png';
 import moppe12 from '../../../assets/images/anos_finais/moppe12.png';
+import ImgBanner from '../../../assets/images/banners/AnosFinais.png';
+import ImgBannerMobile from '../../../assets/images/banners_mobile/anos_finais.png';
 
 const image_url = [moppe1, moppe2, moppe3, moppe4, moppe5, moppe6, moppe7, moppe8, moppe9, moppe10, moppe11, moppe12];
 
@@ -98,7 +100,8 @@ const AnosFinais = () => {
 
   return (
     <Container>
-      <Banner />
+      <Banner imageUrl={ImgBanner}/>
+      <BannerMobile imageUrl={ImgBannerMobile} />
       <Titulo>
         <ImgTitle src={title_page} alt="Anos finais" />
       </Titulo>

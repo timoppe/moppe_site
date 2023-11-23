@@ -26,7 +26,23 @@ export const Banner = styled.section`
     justify-content: center;
 
     @media screen and (max-width: 1030px) {
-        background-image: url('../../../../src/assets/images/banners_mobile/estrutura_escolar.png');
+        display: none;
+    }
+`;
+
+export const BannerMobile =  styled.section`
+    height: 100vh;
+    width: 100%;
+    background-image: url(${props => props.imageUrl});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 1030px) {
+        display: flex;
     }
 `;
 

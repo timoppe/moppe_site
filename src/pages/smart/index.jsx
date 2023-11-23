@@ -1,5 +1,5 @@
 //CSS
-import { Container, Banner, Titulo, LinhaTitulo, Box, Column, Img1, Img2, Img3, Img4, Img5, BoxImages, BoxAlimentacao, BoxAtividades } from './styles';
+import { Container, Banner, BannerMobile, Titulo, LinhaTitulo, Box, Column, Img1, Img2, Img3, Img4, Img5, BoxImages, BoxAlimentacao, BoxAtividades } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -23,6 +23,8 @@ import musicas from '../../assets/images/smart/Aulas e Atividades/musicas.png';
 import historia from '../../assets/images/smart/Aulas e Atividades/historia.png';
 import soninho from '../../assets/images/smart/Aulas e Atividades/soninho.png';
 import higiene from '../../assets/images/smart/Aulas e Atividades/higiene.png';
+import ImgBanner from '../../assets/images/banners/Smart.png';
+import ImgBannerMobile from '../../assets/images/banners_mobile/smart.png';
 
 function useIntersectionObserver(ref, callback) {
   useEffect(() => {
@@ -100,7 +102,8 @@ const Smart = () => {
 
   return (
     <Container>
-      <Banner />
+      <Banner imageUrl={ImgBanner} />
+      <BannerMobile imageUrl={ImgBannerMobile} />
       <Titulo>
         <img src={titulo} alt="Smart" />
       </Titulo>

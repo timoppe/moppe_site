@@ -1,5 +1,5 @@
 //CSS
-import { Container, Banner, Titulo, LinhaTitulo, Img1, Img2, Img3, BoxImages, ImgEstFis, BoxMuitoMais, TitleEstrutura, Column, Box } from './styles';
+import { Container, Banner, BannerMobile, Titulo, LinhaTitulo, Img1, Img2, Img3, BoxImages, ImgEstFis, BoxMuitoMais, TitleEstrutura, Column, Box } from './styles';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -26,6 +26,8 @@ import culinaria from '../../../assets/images/infantil/culinaria.png';
 import historia from '../../../assets/images/infantil/historia.png';
 import img1 from '../../../assets/images/infantil/img1.png';
 import img2 from '../../../assets/images/infantil/img2.png';
+import ImgBanner from '../../../assets/images/banners/Infantil.png';
+import ImgBannerMobile from '../../../assets/images/banners_mobile/ed_infantil.png';
 
 function useIntersectionObserver(ref, callback) {
   useEffect(() => {
@@ -98,7 +100,8 @@ const Infantil = () => {
 
   return (
     <Container>
-      <Banner />
+      <Banner imageUrl={ImgBanner}/>
+      <BannerMobile imageUrl={ImgBannerMobile} />
       <Titulo>
         <img src={title_page} alt="Infantil"/>
       </Titulo>

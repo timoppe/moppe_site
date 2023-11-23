@@ -15,6 +15,7 @@ import {
 
 // Image Banner
 import ImgBanner from '../../assets/images/banner.jpg';
+import ImgBannerMobile from '../../assets/images/banners_mobile/home.png'
 
 // Images slider
 import Depoimento1 from '../../assets/images/home/depoimentos/depoimento1.png';
@@ -171,7 +172,7 @@ const Home = () => {
 
   return (
     <Container>
-        <BannerMobile/>
+        <BannerMobile imageUrl={ImgBannerMobile} />
         <motion.div
           initial={{opacity: 0}}
           animate={{opacity: 1}}

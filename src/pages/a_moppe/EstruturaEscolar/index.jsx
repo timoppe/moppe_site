@@ -2,6 +2,7 @@
 import {
   Container,
   Banner,
+  BannerMobile,
   Titulo,
   LinhaTitulo,
   Conteudo,
@@ -12,7 +13,8 @@ import {
 } from './styles';
 
 //Image Banner
-import ImgBanner from '../../../assets/images/banners/EstruturaEscolar.png';
+import ImgBanner from '../../../assets/images/banners/EstruturaEscolar.png'; 
+import ImgBannerMobile from '../../../assets/images/banners_mobile/estrutura_escolar.png';
 
 //Hooks
 import { useState, useEffect, useRef } from 'react';
@@ -182,6 +184,7 @@ const EstruturaEscolar = () => {
   return (
     <Container>
       <Banner imageUrl={ImgBanner}/>
+      <BannerMobile imageUrl={ImgBannerMobile}/>
       <Titulo>
         <img src={title_page} alt="Estrutura escolar" />
       </Titulo>

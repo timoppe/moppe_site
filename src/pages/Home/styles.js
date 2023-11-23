@@ -41,7 +41,8 @@ export const Banner = styled.section`
 `;
 
 export const BannerMobile = styled.section`
-    background-image: url('/src/assets/images/banners_mobile/home.png');
+    background-image: url(${props => props.imageUrl});
+    background-image: url('');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
