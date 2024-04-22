@@ -212,6 +212,14 @@ const NavbarMobile = () => {
                                                 Agenda Edu
                                             </motion.li>
                                         </Link>
+                                        <Link to="https://sophiaby.layers.education/@moppe/" target="_blank">
+                                            <motion.li 
+                                                whileHover={{backgroundColor: 'rgb(234,137,35)'}}
+                                                whileTap={{scale: 0.9}}
+                                            >
+                                                Agenda Sophia
+                                            </motion.li>
+                                        </Link>
                                         <Link to="https://escolamoppe.gupy.io/" target="_blank">
                                             <motion.li 
                                                 whileHover={{backgroundColor: 'rgb(234,137,35)'}}

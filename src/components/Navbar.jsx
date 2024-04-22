@@ -96,6 +96,7 @@ const Navbar = () => {
                                     <li><NavLink to="/contato">Contato</NavLink></li>
                                     <li><NavLink to="https://portal.sophia.com.br/SophiA_65/Acesso.aspx?escola=3208" target="_blank">Terminal Web</NavLink></li>
                                     <li><NavLink to="https://web.agendaedu.com/" target="_blank">Agenda Edu</NavLink></li>
+                                    <li><NavLink to="https://sophiaby.layers.education/@moppe/" target="_blank">Agenda Sophia</NavLink></li>
                                     <li><NavLink to="https://escolamoppe.gupy.io/" target="_blank">Trabalhe Conosco</NavLink></li>
                                 </ul>
                             </li>
