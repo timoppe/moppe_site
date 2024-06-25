@@ -1,6 +1,5 @@
 // App.jsx
 
-
 // Hooks
 import { useState, useEffect } from 'react';
 import { useAuthentication } from './hooks/useAuthentication';
@@ -10,8 +9,6 @@ import ReactGA4 from 'react-ga4';
 import { initializeGoogleAds } from './components/integrations/GoogleAds';
 import RDStation from './components/integrations/RDStation';
 import BlipChat from './components/integrations/BlipChat';
-
-
 import { useLocation } from 'react-router-dom';
 
 // Context
@@ -35,7 +32,7 @@ function App() {
   const [isAccessMobile, setIsAccessMobile] = useState(null);
   const [initialized, setInitialized] = useState(false);
   const [user, setUser] = useState(undefined);
-  const {auth} = useAuthentication();
+  const { auth } = useAuthentication();
   const location = useLocation();
   const loadingUser = user === undefined;
 
@@ -65,15 +62,29 @@ function App() {
     ReactGA4.initialize("G-432DY2Q7TC");
     setInitialized(true);
   }, []);
-  
+
   // Inicia o google ADS
   useEffect(() => {
     initializeGoogleAds();
-  }, [])
+  }, []);
+
+  // Inicia o Meta Pixel
+  useEffect(() => {
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '389439533579660');
+    fbq('track', 'PageView');
+    console.log('Meta pixel started')
+  }, []);
 
   // Verifica se o GA4 iniciou e envia os dados para o google
   useEffect(() => {
-    
     if (initialized) {
       ReactGA4.set({ page: location.pathname });
       ReactGA4.send("pageview");
@@ -87,22 +98,27 @@ function App() {
     });
   }, [auth]);
 
-  if(loadingUser) {
+  if (loadingUser) {
     return <p>Carregando...</p>;
   }
+
   return (
     <div className="App">
-      <AuthProvider value={{user}}>
-      <ScrollToTop />
-      {!isAccessMobile ? <Navbar /> : <NavbarMobile/>} 
+      <AuthProvider value={{ user }}>
+        <ScrollToTop />
+        {!isAccessMobile ? <Navbar /> : <NavbarMobile />}
         <div className="container">
-          <AppRoutes/>
+          <AppRoutes />
         </div>
-       <Footer />
-       <RDStation />
-       <BlipChat />
-       </AuthProvider>
-     
+        <Footer />
+        <RDStation />
+        <BlipChat />
+        <noscript>
+          <img height="1" width="1" style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=389439533579660&ev=PageView&noscript=1"
+          />
+        </noscript>
+      </AuthProvider>
     </div>
   );
 }

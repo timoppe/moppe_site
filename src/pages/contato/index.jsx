@@ -49,6 +49,7 @@ const Contato = () => {
   let [tipoMessage, setTipoMessage] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
+  const [erro, setErro] = useState(false);
 
   function sendEmail(e) {
     e.preventDefault();
@@ -83,6 +84,10 @@ const Contato = () => {
   }
 
   function handleOnChange(value) {
+    if (message.includes('curriculo') || message.includes('curricullum') || message.includes('trabalhar')) {
+      setErro(true);
+      return;
+    }
     setIsVerified(true);
   }
   
@@ -125,6 +130,7 @@ const Contato = () => {
         </motion.div>
       </div>
       <div className="box_conteudo">
+      {erro && (<p>Para envio de curriculo, acesse nossa página na GUPY</p>)}
       <motion.div
           className="conteudo"
           ref={componentRef2}
@@ -132,6 +138,7 @@ const Contato = () => {
           animate={{opacity: isVisible2 ? 1 : 0}}
           transition={{duration: 1.5}}
       >
+
         <form onSubmit={sendEmail}>
           <input
             type="text"
