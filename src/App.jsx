@@ -8,7 +8,6 @@ import { useAuthentication } from './hooks/useAuthentication';
 import ReactGA4 from 'react-ga4';
 import { initializeGoogleAds } from './components/integrations/GoogleAds';
 import RDStation from './components/integrations/RDStation';
-import BlipChat from './components/integrations/BlipChat';
 import { useLocation } from 'react-router-dom';
 
 // Context
@@ -112,7 +111,6 @@ function App() {
         </div>
         <Footer />
         <RDStation />
-        <BlipChat />
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=389439533579660&ev=PageView&noscript=1"
